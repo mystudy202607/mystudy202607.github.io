@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="给初三男生的 1000 米跑进 3 分钟安全训练计划：青少年降维双阈值、饮食睡眠、逐日课表与条件式最短周期。">
+<title>1000 米跑进 3 分钟｜初三男生不拔苗助长双阈值计划</title>
+<style>
+:root{
+  --ink:#13251f;
+  --ink-soft:#42534b;
+  --muted:#6a756f;
+  --paper:#f5f0e6;
+  --paper-2:#fffdf8;
+  --paper-3:#faf5eb;
+  --line:#d9d1c2;
+  --line-soft:#e9e2d5;
+  --green:#1f5b48;
+  --green-2:#2d7b60;
+  --green-pale:#e7efe8;
+  --green-mist:#f0f6f1;
+  --orange:#b84424;
+  --orange-bright:#d35a33;
+  --orange-pale:#f8e6dc;
+  --gold:#a47832;
+  --red:#922d29;
+  --red-pale:#f8e4e1;
+  --blue:#315f78;
+  --blue-pale:#e7eff4;
+  --shadow:0 16px 44px rgba(19,37,31,.08);
+  --shadow-small:0 8px 24px rgba(19,37,31,.06);
+  --radius:14px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(184,68,36,.09), transparent 30rem),
+    radial-gradient(circle at 92% 18%, rgba(31,91,72,.09), transparent 32rem),
+    var(--paper);
+  font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC","Hiragino Sans GB",sans-serif;
+  font-size:16px;
+  line-height:1.72;
+  -webkit-text-size-adjust:100%;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.35;
+  background-image:repeating-linear-gradient(0deg, transparent 0 31px, rgba(19,37,31,.035) 31px 32px);
+}
+::selection{background:var(--orange);color:#fff}
+a{color:var(--green);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--orange)}
+img,svg{max-width:100%}
+p{margin:.55rem 0 0}
+ul,ol{margin:.5rem 0 0;padding-left:1.35rem}
+li{margin:.3rem 0}
+strong{font-weight:700}
+code{font-family:Consolas,"SFMono-Regular",monospace;font-size:.9em;background:var(--green-pale);padding:.08em .35em;border-radius:4px}
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:0;
+  z-index:99;
+  background:#fff;
+  color:#000;
+  padding:10px 14px;
+}
+.skip-link:focus{left:12px;top:12px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fffaf0;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(211,90,51,.35), transparent 24rem),
+    linear-gradient(112deg, #10251e 0%, #173e31 56%, #1f5b48 100%);
+  border-bottom:6px solid var(--orange-bright);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.32;
+  background:repeating-linear-gradient(90deg, transparent 0 119px, rgba(255,255,255,.14) 119px 120px);
+  mask-image:linear-gradient(90deg, transparent 0%, #000 55%, #000 100%);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-150px;
+  top:-180px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+  box-shadow:0 0 0 36px rgba(255,255,255,.03), 0 0 0 72px rgba(255,255,255,.025);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1;padding-top:34px;padding-bottom:38px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);
+  gap:34px;
+  align-items:end;
+}
+.eyebrow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin:0 0 18px;
+  font-size:.74rem;
+  line-height:1.5;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#f3c7ad;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--orange-bright);display:inline-block}
+h1,h2,h3,.display{
+  font-family:Georgia,"Songti SC","STSong","SimSun",serif;
+  letter-spacing:.01em;
+}
+h1{
+  margin:0;
+  max-width:760px;
+  font-size:clamp(2.55rem,7vw,5.4rem);
+  line-height:1.03;
+  font-weight:700;
+  text-wrap:balance;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffd8c2;
+  white-space:nowrap;
+}
+.hero-sub{
+  margin:18px 0 0;
+  max-width:650px;
+  color:#e5eee8;
+  font-size:clamp(1rem,1.6vw,1.16rem);
+  line-height:1.75;
+}
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 0;
+  padding:0;
+  list-style:none;
+}
+.hero-tags li{
+  margin:0;
+  padding:5px 10px;
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:#f9f2e8;
+  font-size:.76rem;
+  line-height:1.4;
+}
+.hero-note{
+  margin:20px 0 0;
+  padding-left:14px;
+  border-left:3px solid var(--orange-bright);
+  color:#f5dfd2;
+  font-size:.84rem;
+  max-width:680px;
+}
+.target-plate{
+  position:relative;
+  padding:22px 22px 18px;
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:var(--radius);
+  background:rgba(7,24,18,.3);
+  backdrop-filter:blur(5px);
+  box-shadow:0 22px 44px rgba(0,0,0,.18);
+}
+.target-plate::before{
+  content:"";
+  position:absolute;
+  left:-1px;
+  top:22px;
+  bottom:22px;
+  width:4px;
+  background:var(--orange-bright);
+}
+.target-label{
+  margin:0;
+  color:#f1d7c6;
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.target-time{
+  margin:3px 0 2px;
+  font-family:Georgia,"Songti SC","SimSun",serif;
+  font-size:clamp(3.4rem,7vw,5rem);
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.04em;
+  color:#fff9ef;
+}
+.target-time span{font-size:.32em;letter-spacing:.04em;color:#f4c7af;margin-left:6px}
+@media (min-width:961px){
+  .target-time{font-size:clamp(3.6rem,5vw,4.8rem)}
+  .target-time span{display:block;margin:4px 0 0;font-size:.24em;letter-spacing:.08em}
+}
+.target-splits{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:17px 0 0;
+  padding:14px 0 0;
+  border-top:1px solid rgba(255,255,255,.18);
+}
+.target-splits div{min-width:0}
+.target-splits b{display:block;color:#fff9ef;font-size:1.06rem;line-height:1.2;font-variant-numeric:tabular-nums}
+.target-splits small{display:block;margin-top:3px;color:#c9d8cf;font-size:.66rem;line-height:1.3}
+.target-plate p{margin:13px 0 0;color:#d7e3db;font-size:.72rem;line-height:1.55}
+.toc{
+  position:relative;
+  z-index:3;
+  margin-top:-1px;
+  background:var(--paper-2);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-small);
+}
+.toc-inner{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px 10px;
+  padding-top:12px;
+  padding-bottom:12px;
+}
+.toc-label{
+  margin:0 6px 0 0;
+  color:var(--orange);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.toc a{
+  display:inline-block;
+  padding:3px 6px;
+  border-radius:5px;
+  color:var(--ink-soft);
+  font-size:.77rem;
+  line-height:1.5;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.toc a:hover,.toc a:focus{background:var(--green-pale);color:var(--green)}
+main{display:block}
+.section{
+  padding:44px 0 12px;
+  scroll-margin-top:18px;
+}
+.section-head{
+  display:grid;
+  grid-template-columns:62px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  margin-bottom:20px;
+}
+.sec-num{
+  padding-top:8px;
+  border-top:2px solid var(--orange);
+  color:var(--orange);
+  font-family:Georgia,"Songti SC","SimSun",serif;
+  font-size:1.48rem;
+  line-height:1;
+  letter-spacing:.06em;
+}
+.sec-kicker{
+  margin:0 0 4px;
+  color:var(--muted);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+h2{
+  margin:0;
+  font-size:clamp(1.75rem,3.8vw,2.65rem);
+  line-height:1.18;
+  font-weight:700;
+  text-wrap:balance;
+}
+.lede{
+  max-width:78ch;
+  margin:8px 0 0;
+  color:var(--ink-soft);
+  font-size:1.02rem;
+  line-height:1.82;
+}
+.small{font-size:.82rem;color:var(--muted);line-height:1.65}
+.micro{font-size:.7rem;color:var(--muted);letter-spacing:.02em}
+.card{
+  min-width:0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--paper-2);
+  box-shadow:var(--shadow-small);
+}
+.card h3{
+  margin:0;
+  font-size:1.22rem;
+  line-height:1.35;
+}
+.card h4{
+  margin:0 0 8px;
+  font-size:.96rem;
+  line-height:1.5;
+}
+.card > p{color:var(--ink-soft)}
+.card.accent{border-top:4px solid var(--orange)}
+.card.green{border-top:4px solid var(--green)}
+.card.red{border-top:4px solid var(--red)}
+.label{
+  display:inline-block;
+  margin-bottom:8px;
+  color:var(--orange);
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stack{display:grid;gap:16px}
+.verdict-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);
+  gap:16px;
+}
+.verdict-main{padding:24px;position:relative;overflow:hidden}
+.verdict-main::after{
+  content:"3:00";
+  position:absolute;
+  right:-8px;
+  bottom:-35px;
+  font-family:Georgia,serif;
+  font-size:8.5rem;
+  line-height:1;
+  color:rgba(31,91,72,.055);
+  pointer-events:none;
+}
+.verdict-main h3{font-size:clamp(1.35rem,2.4vw,1.8rem);max-width:48ch}
+.verdict-main p{max-width:66ch}
+.split-strip{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:18px;
+}
+.split-strip div{
+  padding:10px 11px;
+  border:1px solid var(--line-soft);
+  border-radius:8px;
+  background:var(--paper-3);
+}
+.split-strip span{display:block;color:var(--muted);font-size:.68rem;line-height:1.4}
+.split-strip b{display:block;margin-top:2px;font-family:Georgia,"Songti SC",serif;font-size:1.28rem;line-height:1.2;font-variant-numeric:tabular-nums}
+.risk-list{margin:8px 0 0;padding:0;list-style:none}
+.risk-list li{
+  position:relative;
+  margin:0;
+  padding:8px 0 8px 19px;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--ink-soft);
+  font-size:.86rem;
+  line-height:1.6;
+}
+.risk-list li:last-child{border-bottom:0;padding-bottom:0}
+.risk-list li::before{
+  content:"";
+  position:absolute;
+  left:1px;
+  top:17px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--orange);
+}
+.stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{
+  min-width:0;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:rgba(255,253,248,.78);
+}
+.stat span{display:block;color:var(--muted);font-size:.68rem;line-height:1.4;letter-spacing:.02em}
+.stat b{display:block;margin-top:3px;font-family:Georgia,"Songti SC",serif;font-size:1.44rem;line-height:1.25;font-variant-numeric:tabular-nums}
+.stat small{display:block;margin-top:2px;color:var(--muted);font-size:.65rem;line-height:1.35}
+.callout{
+  margin:16px 0;
+  padding:16px 18px;
+  border-left:5px solid var(--orange);
+  border-radius:0 10px 10px 0;
+  background:var(--orange-pale);
+  color:var(--ink);
+}
+.callout.green{border-left-color:var(--green);background:var(--green-mist)}
+.callout.red{border-left-color:var(--red);background:var(--red-pale)}
+.callout.blue{border-left-color:var(--blue);background:var(--blue-pale)}
+.callout strong{display:block;margin-bottom:2px;font-size:.92rem}
+.callout p{margin:.2rem 0 0;font-size:.86rem;line-height:1.68}
+.callout ul{margin:.4rem 0 0;font-size:.86rem}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pill{
+  display:inline-block;
+  padding:3px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--paper-3);
+  color:var(--ink-soft);
+  font-size:.68rem;
+  line-height:1.45;
+  white-space:nowrap;
+}
+.pill.green{background:var(--green-pale);border-color:#c8dace;color:var(--green)}
+.pill.orange{background:var(--orange-pale);border-color:#edc7b4;color:#8d361d}
+.pill.red{background:var(--red-pale);border-color:#e7c6c2;color:var(--red)}
+.pill.blue{background:var(--blue-pale);border-color:#c9dbe4;color:var(--blue)}
+.ban-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+.ban{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  min-width:0;
+  padding:11px 12px;
+  border:1px solid #e8c8c2;
+  border-radius:8px;
+  background:#fff8f6;
+  color:#4d2925;
+  font-size:.84rem;
+  line-height:1.58;
+}
+.ban .x{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:19px;
+  height:19px;
+  margin-top:1px;
+  border-radius:50%;
+  background:var(--red);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1;
+}
+.rule-list{margin:0;padding:0;list-style:none;counter-reset:rule}
+.rule-list li{
+  position:relative;
+  margin:0;
+  padding:12px 0 12px 42px;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--ink-soft);
+  font-size:.9rem;
+  line-height:1.68;
+  counter-increment:rule;
+}
+.rule-list li:last-child{border-bottom:0;padding-bottom:0}
+.rule-list li::before{
+  content:counter(rule,decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:12px;
+  color:var(--orange);
+  font-family:Georgia,serif;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.table-wrap{
+  width:100%;
+  max-width:100%;
+  margin:15px 0;
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:var(--paper-2);
+  box-shadow:var(--shadow-small);
+  -webkit-overflow-scrolling:touch;
+}
+.table-wrap:focus{outline:3px solid rgba(184,68,36,.3);outline-offset:2px}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.84rem;
+  line-height:1.62;
+  font-variant-numeric:tabular-nums;
+}
+caption{
+  padding:12px 14px;
+  color:var(--muted);
+  font-size:.76rem;
+  text-align:left;
+  line-height:1.55;
+  border-bottom:1px solid var(--line-soft);
+  background:var(--paper-3);
+}
+th{
+  padding:10px 12px;
+  border-bottom:1px solid #c9d5cc;
+  background:#e8efe9;
+  color:#153c30;
+  font-size:.78rem;
+  font-weight:700;
+  line-height:1.5;
+  text-align:left;
+  vertical-align:bottom;
+}
+td{
+  padding:10px 12px;
+  border-bottom:1px solid var(--line-soft);
+  vertical-align:top;
+  overflow-wrap:break-word;
+}
+tbody tr:nth-child(even) td{background:#fbf8f0}
+tbody tr:last-child td{border-bottom:0}
+td.nowrap,th.nowrap{white-space:nowrap}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.table-compact td,.table-compact th{padding:8px 10px}
+.table-wide{min-width:780px}
+.table-days{min-width:900px}
+.scroll-hint{display:none;margin:-3px 0 10px;color:var(--muted);font-size:.72rem}
+.week-card .scroll-hint{padding:8px 16px 0;margin:0;color:var(--orange)}
+.tag{
+  display:inline-block;
+  padding:2px 6px;
+  border-radius:4px;
+  background:var(--green-pale);
+  color:var(--green);
+  font-size:.66rem;
+  font-weight:700;
+  line-height:1.5;
+  white-space:nowrap;
+}
+.tag.orange{background:var(--orange-pale);color:#8d361d}
+.tag.red{background:var(--red-pale);color:var(--red)}
+.tag.blue{background:var(--blue-pale);color:var(--blue)}
+.plain-list{margin:8px 0 0;padding:0;list-style:none}
+.plain-list li{
+  position:relative;
+  padding:7px 0 7px 18px;
+  border-bottom:1px dashed var(--line-soft);
+  color:var(--ink-soft);
+  font-size:.86rem;
+  line-height:1.65;
+}
+.plain-list li:last-child{border-bottom:0}
+.plain-list li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:15px;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--green-2);
+}
+.tick-list{margin:8px 0 0;padding:0;list-style:none}
+.tick-list li{
+  position:relative;
+  padding:8px 0 8px 25px;
+  border-bottom:1px dashed var(--line-soft);
+  color:var(--ink-soft);
+  font-size:.88rem;
+  line-height:1.65;
+}
+.tick-list li:last-child{border-bottom:0}
+.tick-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:8px;
+  color:var(--green-2);
+  font-weight:700;
+}
+.cross-list li::before{content:"×";color:var(--red)}
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(9,minmax(0,1fr));
+  gap:6px;
+  margin:16px 0 4px;
+}
+.timeline .phase{
+  min-width:0;
+  padding:10px 8px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--paper-2);
+}
+.timeline .phase.test{border-color:#e1b5aa;background:var(--orange-pale)}
+.timeline .phase.down{border-color:#c9d8ce;background:var(--green-mist)}
+.timeline .phase b{display:block;font-size:.74rem;line-height:1.3;color:var(--ink)}
+.timeline .phase span{display:block;margin-top:2px;font-size:.62rem;line-height:1.4;color:var(--muted)}
+.microcycle{
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:7px;
+  margin:16px 0;
+}
+.micro-day{
+  min-width:0;
+  padding:11px 9px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--paper-2);
+}
+.micro-day .dow{display:block;color:var(--muted);font-size:.65rem;line-height:1.3}
+.micro-day b{display:block;margin-top:3px;font-size:.82rem;line-height:1.4}
+.micro-day small{display:block;margin-top:2px;color:var(--muted);font-size:.65rem;line-height:1.4}
+.micro-day.quality{background:var(--orange-pale);border-color:#e7c0ae}
+.micro-day.rest{background:var(--green-mist);border-color:#cbdccf}
+.week-card{
+  margin:22px 0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-top:6px solid var(--green);
+  border-radius:13px;
+  background:var(--paper-2);
+  box-shadow:var(--shadow-small);
+}
+.week-card.down{border-top-color:var(--orange)}
+.week-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px 18px;
+  padding:17px 19px 15px;
+  background:linear-gradient(90deg, var(--green-mist), rgba(255,253,248,.5));
+  border-bottom:1px solid var(--line-soft);
+}
+.week-card.down .week-head{background:linear-gradient(90deg, var(--orange-pale), rgba(255,253,248,.5))}
+.week-head h3{margin:0;font-size:1.25rem;line-height:1.35}
+.week-head p{margin:3px 0 0;color:var(--muted);font-size:.78rem;line-height:1.55}
+.week-badges{display:flex;flex-wrap:wrap;gap:5px;padding-top:2px}
+.week-card .table-wrap{margin:0;border:0;border-radius:0;box-shadow:none}
+.week-card table{min-width:930px}
+.week-card th{font-size:.72rem;background:#f0f4ef}
+.week-card td{font-size:.78rem;line-height:1.6}
+.week-foot{
+  padding:11px 16px;
+  border-top:1px solid var(--line-soft);
+  background:var(--paper-3);
+  color:var(--muted);
+  font-size:.74rem;
+  line-height:1.65;
+}
+.day-rest td{color:var(--muted);background:var(--green-mist)!important}
+.session-code{
+  display:inline-block;
+  padding:1px 5px;
+  border:1px solid #cad8ce;
+  border-radius:4px;
+  background:#fff;
+  color:var(--green);
+  font-size:.66rem;
+  font-weight:700;
+  white-space:nowrap;
+}
+.sched-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:16px}
+.sched-card{overflow:hidden}
+.sched-head{
+  padding:15px 17px;
+  background:var(--green);
+  color:#fffaf0;
+}
+.sched-head.weekend{background:#7a4a28}
+.sched-head h3{margin:0;color:#fffaf0;font-size:1.15rem;line-height:1.4}
+.sched-head p{margin:2px 0 0;color:#dce9e0;font-size:.73rem;line-height:1.5}
+.sched-card .table-wrap{margin:0;border:0;border-radius:0;box-shadow:none}
+.sched-card table{font-size:.8rem}
+.sched-card td:first-child{
+  width:112px;
+  color:var(--green);
+  font-weight:700;
+  white-space:nowrap;
+}
+.sched-card td:last-child{color:var(--ink-soft)}
+.sched-card .note{
+  padding:11px 15px;
+  border-top:1px solid var(--line-soft);
+  background:var(--paper-3);
+  color:var(--muted);
+  font-size:.73rem;
+  line-height:1.65;
+}
+.estimate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.estimate{
+  min-width:0;
+  padding:18px;
+  border:1px solid var(--line);
+  border-top:5px solid var(--green);
+  border-radius:11px;
+  background:var(--paper-2);
+  box-shadow:var(--shadow-small);
+}
+.estimate.close{border-top-color:var(--orange)}
+.estimate.long{border-top-color:var(--blue)}
+.estimate .band{
+  display:block;
+  color:var(--green);
+  font-family:Georgia,"Songti SC",serif;
+  font-size:1.34rem;
+  line-height:1.3;
+  font-variant-numeric:tabular-nums;
+}
+.estimate.close .band{color:var(--orange)}
+.estimate.long .band{color:var(--blue)}
+.estimate .band-note{display:block;margin-top:2px;color:var(--muted);font-size:.68rem;line-height:1.45}
+.range-list{margin:12px 0 0;padding:0;list-style:none}
+.range-list li{
+  display:grid;
+  grid-template-columns:62px minmax(0,1fr);
+  gap:8px;
+  padding:7px 0;
+  border-bottom:1px solid var(--line-soft);
+  font-size:.78rem;
+  line-height:1.5;
+}
+.range-list li:last-child{border-bottom:0}
+.range-list span{color:var(--muted)}
+.range-list b{color:var(--ink);font-variant-numeric:tabular-nums}
+.estimate p{margin:11px 0 0;color:var(--muted);font-size:.74rem;line-height:1.6}
+.red-table td:first-child{font-weight:700;color:var(--red)}
+.compare-table th:first-child{width:23%}
+.compare-table td{font-size:.82rem}
+.keyline{
+  margin:18px 0 0;
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-left:5px solid var(--green);
+  border-radius:0 10px 10px 0;
+  background:var(--paper-2);
+  font-size:.92rem;
+  line-height:1.75;
+}
+.keyline strong{color:var(--green)}
+.bottom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.log-table td:first-child{white-space:nowrap;color:var(--muted)}
+.footer{
+  margin-top:52px;
+  padding:30px 0 38px;
+  border-top:1px solid var(--line);
+  background:#efe8db;
+}
+.footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end}
+.footer p{margin:0;max-width:78ch;color:var(--ink-soft);font-size:.82rem;line-height:1.75}
+.footer strong{color:var(--ink)}
+.footer-final{
+  display:block!important;
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(19,37,31,.16);
+}
+.footer-final p{
+  max-width:82ch;
+  color:var(--ink);
+  font-size:.78rem;
+  line-height:1.7;
+}
+.top-link{font-size:.76rem;white-space:nowrap}
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  white-space:nowrap;border:0;
+}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:24px}
+  .target-plate{max-width:520px}
+  .verdict-grid{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .estimate-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .microcycle{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .scroll-hint{display:block}
+}
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  .hero .wrap{padding-top:25px;padding-bottom:28px}
+  .section{padding-top:34px}
+  .section-head{grid-template-columns:42px minmax(0,1fr);gap:12px}
+  .sec-num{font-size:1.15rem;padding-top:6px}
+  h2{font-size:clamp(1.55rem,6.7vw,2.1rem)}
+  .lede{font-size:.95rem}
+  .grid-2,.grid-3,.grid-4,.bottom-grid,.sched-grid{grid-template-columns:1fr}
+  .verdict-main{padding:19px}
+  .split-strip{grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .split-strip b{font-size:1.06rem}
+  .ban-grid{grid-template-columns:1fr}
+  .microcycle{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .micro-day.rest{grid-column:span 2}
+  .timeline{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .table-wrap{position:relative}
+  .scroll-hint{display:block}
+  .table-wide,.table-days{min-width:760px}
+  .week-card table{min-width:820px}
+  th,td{padding:8px 9px}
+  th{font-size:.72rem}
+  td{font-size:.79rem}
+  .week-head{padding:14px 14px 12px}
+  .week-head h3{font-size:1.12rem}
+  .week-foot{padding:10px 13px}
+  .footer .wrap{grid-template-columns:1fr;align-items:start}
+  .target-time{font-size:4rem}
+  .toc a{font-size:.74rem}
+  .toc-label{width:100%;margin-bottom:1px}
+}
+@media (max-width:430px){
+  .hero-tags li{font-size:.7rem}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .toc-inner{gap:2px 4px}
+  .toc a{padding:3px 4px}
+  .split-strip{grid-template-columns:1fr}
+  .split-strip div{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .split-strip b{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+@media print{
+  @page{size:A4;margin:11mm 10mm 13mm}
+  html{scroll-behavior:auto}
+  body{
+    background:#fff!important;
+    color:#000;
+    font-size:9.1pt;
+    line-height:1.55;
+  }
+  body::before{display:none}
+  .wrap{max-width:none;padding:0}
+  .hero{
+    color:#000!important;
+    background:#fff!important;
+    border-bottom:2px solid #000;
+  }
+  .hero::before,.hero::after{display:none}
+  .hero .wrap{padding:0 0 12px}
+  .hero-grid{grid-template-columns:1fr;gap:10px}
+  .target-plate{
+    color:#000;
+    background:#f4f4f4!important;
+    border:1px solid #bbb;
+    box-shadow:none;
+    max-width:none;
+    padding:10px 12px;
+  }
+  .target-plate::before{display:none}
+  .target-time,.target-splits b{color:#000}
+  .target-time{font-size:24pt}
+  .target-time span{display:inline;margin-left:5px;font-size:10pt;letter-spacing:.04em}
+  .target-time span,.target-splits small,.target-label,.target-plate p{color:#333}
+  .hero-sub,.hero-note,.eyebrow{color:#222}
+  .hero h1 em{color:#000}
+  .hero-tags{gap:4px}
+  .hero-tags li{color:#000;border:1px solid #777;background:#fff}
+  h1{font-size:28pt;line-height:1.1}
+  .toc,.skip-link,.no-print,.scroll-hint{display:none!important}
+  .section{padding-top:14px}
+  .section-head{grid-template-columns:34px minmax(0,1fr);gap:8px;margin-bottom:9px;break-inside:avoid;break-after:avoid}
+  #daily .grid-2{grid-template-columns:1fr;gap:8px}
+  .sec-num{font-size:13pt;border-top:1px solid #000;color:#000;padding-top:3px}
+  h2{font-size:17pt;line-height:1.2}
+  .lede{font-size:9.4pt}
+  .card,.week-card,.estimate,.callout,.keyline{
+    box-shadow:none!important;
+    break-inside:auto;
+  }
+  .card,.estimate,.callout,.keyline{border:1px solid #bbb}
+  .verdict-main::after{display:none}
+  .split-strip div,.stat,.micro-day{background:#fff!important;border:1px solid #ccc}
+  .week-card{border:1px solid #999;border-top:3px solid #000}
+  .week-head{background:#f1f1f1!important;border-bottom:1px solid #bbb;break-inside:avoid;break-after:avoid}
+  .week-foot{background:#f7f7f7!important}
+  .week-card .table-wrap{margin:0;border:0;box-shadow:none}
+  .table-wrap{overflow:visible!important;border:1px solid #aaa;box-shadow:none}
+  table,.table-wide,.table-days,.week-card table{min-width:0!important;width:100%!important;font-size:7.3pt}
+  th,td{padding:4px 5px;line-height:1.4}
+  th{background:#e8e8e8!important;color:#000;border-bottom:1px solid #777}
+  caption{background:#f3f3f3!important;color:#222;font-size:7pt;padding:5px 6px}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  h1,h2,h3{break-after:avoid}
+  .hero-tags li,.pill,.tag,.session-code{background:#fff!important;color:#000;border:1px solid #999}
+  .ban{background:#fff!important;border:1px solid #bbb}
+  .ban .x{background:#000;color:#fff}
+  .day-rest td{background:#f3f3f3!important}
+  .footer{background:#fff;border-top:1px solid #000;margin-top:8px;padding:6px 0 0;break-inside:avoid}
+  .footer .wrap{grid-template-columns:1fr;margin-top:0}
+  .footer p{font-size:7.6pt;line-height:1.45}
+  .footer-final{margin-top:4px;padding-top:3px}
+  .footer-final p{font-size:7.6pt}
+  .top-link{display:none}
+  .print-break{break-before:page}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>青少年 800 / 1000 米 · 不拔苗助长版 · 安全降维双阈值</p>
+        <h1>1000 米<br>跑进 <em>3 分钟</em></h1>
+        <p class="hero-sub">给一名初三男生的 8 周核心训练周期。保留双阈值的“质量控制”，去掉职业运动员的大跑量、高频双练和一切硬顶。先测 1000 米，再谈最短周期。</p>
+        <ul class="hero-tags" aria-label="计划关键事实">
+          <li>800 米基线 2:31</li>
+          <li>目标 3:00 / 1000 米</li>
+          <li>每次 20–30 分钟</li>
+          <li>每周 2 个双阈值日</li>
+          <li>每周至少 1 天全休</li>
+        </ul>
+        <p class="hero-note"><strong>先看结论：</strong>3:00 是进取目标，不是保证结果。没有 1000 米基线之前，任何“最短周期”都只能是条件式估算；本页给区间、给前提、给红线，不给空头承诺。</p>
+      </div>
+      <aside class="target-plate" aria-label="目标配速卡">
+        <p class="target-label">Target / 目标</p>
+        <div class="target-time">3:00<span>/ 1000m</span></div>
+        <div class="target-splits">
+          <div><b>36″</b><small>每 200 米</small></div>
+          <div><b>72″</b><small>每 400 米</small></div>
+          <div><b>3:00</b><small>每公里</small></div>
+        </div>
+        <p>配速是“上限”，不是每天都要跑到的数字。除测试日外，不用全程全力去撞 3:00。</p>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="页面目录">
+  <div class="wrap toc-inner">
+    <span class="toc-label">Reading map</span>
+    <a href="#verdict">01 结论卡</a>
+    <a href="#baseline">02 基线测试</a>
+    <a href="#principles">03 不拔苗助长</a>
+    <a href="#overview">04 周期总览</a>
+    <a href="#specific">05 1000 米专项</a>
+    <a href="#daily">06 逐日课表</a>
+    <a href="#nutrition">07 作息与饮食</a>
+    <a href="#sleep">08 睡眠恢复</a>
+    <a href="#timeline">09 条件式周期</a>
+    <a href="#redlines">10 执行红线</a>
+    <a href="#jakob">11 与雅各布的区别</a>
+    <a href="#risks">12 风险与说明</a>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="section" id="verdict" aria-labelledby="verdict-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">01</div>
+        <div>
+          <p class="sec-kicker">The honest bottom line</p>
+          <h2 id="verdict-title">先把“能不能”说清楚，再谈“多久”</h2>
+          <p class="lede">800 米 2:31 说明你有速度底子，但它不是 1000 米成绩。按常用 Riegel 换算，1000 米大约在 3:11 附近，只能作为粗估；而 3:00 要求 400 米跑到 72 秒，比你 800 米全程平均约 75.5 秒/400 米还快约 4.6%。这意味着目标需要真正的耐力转化，不能靠一周猛练解决。</p>
+        </div>
+      </div>
+
+      <div class="verdict-grid">
+        <article class="card verdict-main" aria-labelledby="verdict-main-title">
+          <span class="label">One-sentence verdict / 一句话结论</span>
+          <h3 id="verdict-main-title">在安全前提下，这个目标值得试，但必须先测 1000 米；最短周期按基线分档，绝不承诺日期。</h3>
+          <p>当前最合理的路线是：用 1 周完成恢复与基线测试，然后执行最多 8 周的核心周期（W4 达标就转维持，不必为“跑满”而加码）；以第 4 周和第 8 周两次 1000 米测试作为硬节点。基线越接近 3:00，周期越短；如果基线在 3:20 以上，8 周通常只够打基础，需要滚动延长。</p>
+          <div class="split-strip" aria-label="目标和当前速度对照">
+            <div><span>800 米实际平均</span><b>75.5″ / 400</b></div>
+            <div><span>1000 米目标配速</span><b>72″ / 400</b></div>
+            <div><span>每 400 米需提升</span><b>约 4.6%</b></div>
+          </div>
+          <p class="small">Riegel 换算不是选材标准，也不考虑训练年龄、发育节奏、跑姿和测试条件。它只提醒你：这不是“只差一点”的目标，所以更不能拔苗助长。</p>
+        </article>
+        <aside class="card red" aria-labelledby="risk-title">
+          <span class="label">Key risks / 关键风险</span>
+          <h3 id="risk-title">最可能拖慢你的，不是练得少</h3>
+          <ul class="risk-list">
+            <li>一开始兴奋加码，连续高质量课，第二周就困、痛、跑不动。</li>
+            <li>睡眠不足 8 小时，却用中午或晚上再补一次强度。</li>
+            <li>膝盖、胫骨、脚跟出现生长相关疼痛，仍带伤硬顶。</li>
+            <li>铁摄入不足、能量不足，表现为心慌、头晕、越练越沉。</li>
+            <li>频繁全力测 1000 米，把测试当成训练。</li>
+          </ul>
+          <p class="small" style="margin-top:12px">处理原则只有一句：先降级，再找原因；不靠意志力掩盖红灯。</p>
+        </aside>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card green">
+          <span class="label">Conditional shortest window / 条件式最短窗口</span>
+          <h3>没有基线，就没有单一“最短周期”</h3>
+          <div class="table-wrap table-compact" style="margin-top:10px">
+            <table>
+              <caption>单位：完整训练周；不含基线测试周。理想 / 现实 / 保守，均为区间而非承诺。</caption>
+              <thead>
+                <tr><th scope="col">1000 米基线</th><th scope="col">理想安全最短</th><th scope="col">更现实</th><th scope="col">保守</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="num">3:00–3:10</td><td class="num">4–6 周</td><td class="num">6–8 周</td><td class="num">8–12 周</td></tr>
+                <tr><td class="num">3:10–3:20</td><td class="num">6–8 周</td><td class="num">8–12 周</td><td class="num">12–16 周</td></tr>
+                <tr><td>3:20 以上</td><td>10–12 周<br><span class="small">仅 3:20–3:30</span></td><td class="num">12–18 周</td><td class="num">18–24 周起</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">若基线已低于 3:00，目标已经达成；做一次确认测试后转维持，不要为了“更快”继续加码。若基线在 3:30 以上，先按基础周期滚动，不把 3:00 当最近期限。</p>
+        </div>
+        <div class="card">
+          <span class="label">Weekly dose / 每周剂量</span>
+          <h3>最多 8 次短课，不是一个“每天双练”计划</h3>
+          <div class="stat-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+            <div class="stat"><span>双阈值日</span><b>2 天</b><small>周三、周六，间隔 72 小时</small></div>
+            <div class="stat"><span>单次训练</span><b>20–30′</b><small>含热身与冷身</small></div>
+            <div class="stat"><span>速度刺激</span><b>≤1 次</b><small>不排在双阈值日前一天</small></div>
+            <div class="stat"><span>完全休息</span><b>≥1 天</b><small>通常为周日</small></div>
+          </div>
+          <p style="margin-top:13px">双阈值日之所以放在周三和周六，是因为它们之间隔了 72 小时，且周六晚练后接周日全休；周一速度刺激与周三之间还隔着一个完整轻松日。这个安排比“逮到空就双练”更符合初三学生的恢复条件。</p>
+          <div class="pill-row">
+            <span class="pill green">RPE 优先</span>
+            <span class="pill green">心率辅助</span>
+            <span class="pill orange">不扎手指测乳酸</span>
+            <span class="pill">不补课硬顶</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <strong>先把承诺边界写死</strong>
+        <p>本计划承诺的是“安全执行框架”和“可验证的节点”，不是“8 周必定 3:00”。如果安全恢复与最短周期冲突，永远以安全最短为准。达不到，不是失败；带伤、失眠、厌学还硬顶，才是失败。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="baseline" aria-labelledby="baseline-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">02</div>
+        <div>
+          <p class="sec-kicker">Test first, then prescribe</p>
+          <h2 id="baseline-title">第一步：用一次 1000 米测试，替代所有猜测</h2>
+          <p class="lede">800 米 2:31 只能说明你的速度底子，不能说明你 1000 米的耐力、配速控制和最后 200 米能力。基线测试必须在充分恢复、充分热身、非空腹、非疲劳的状态下完成；测完后再锁定你的条件式周期。</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card green">
+          <span class="label">Baseline protocol / 基线流程</span>
+          <h3>1000 米基线测试（21–23 分钟，含热身冷身）</h3>
+          <ol class="rule-list" style="margin-top:8px">
+            <li><strong>前置条件：</strong>测试前 48 小时不做高强度课；前一晚睡够 8 小时；当天正常吃饭，不在空腹或刚吃完 1 小时内跑；无发热、无关节痛、无“今天特别沉”。</li>
+            <li><strong>场地与天气：</strong>优先 400 米田径场；记录温度、风向、鞋款。高温、暴雨、雾霾天改期，不在恶劣条件下硬测。</li>
+            <li><strong>热身 10 分钟：</strong>3 分钟慢跑 + 5 分钟动态活动（高抬腿、后踢腿、弓步走、踝关节活动、摆腿）+ 2×60 米加速跑，走回起点。</li>
+            <li><strong>配速任务：</strong>前 200 米控制在 37–39 秒，不冲；之后尽量匀速。把每 200 米分段写下来，不要只记总时间。</li>
+            <li><strong>测试与冷身：</strong>1000 米全力但讲配速；结束后记 1 分钟心率、RPE、是否有疼痛；慢走/慢跑 5 分钟 + 3 分钟静态拉伸。</li>
+            <li><strong>判读：</strong>总时间、五个 200 米分段、RPE、恢复速度一起看。总时间只差 2 秒，但前快后崩，也说明配速需要改。</li>
+          </ol>
+          <div class="callout blue" style="margin-bottom:0">
+            <strong>测试当天不做第二练</strong>
+            <p>测试本身就是一次高强度课。当天不安排轻松跑“补量”，第二天也不安排速度或双阈值；至少 48 小时低强度恢复后，再进入第 1 周。</p>
+          </div>
+        </div>
+        <div class="card">
+          <span class="label">Week 0 / 准备与测试周</span>
+          <h3>如果刚跑完 800 米，先给身体几天缓冲</h3>
+          <div class="table-wrap table-compact" style="margin-top:9px">
+            <table>
+              <caption>建议把基线测试放在周六。若你已经恢复多日、无酸痛，可提前，但至少要满足“48 小时无高强度 + 睡眠 8 小时”。</caption>
+              <thead><tr><th scope="col">日</th><th scope="col">安排</th><th scope="col">要点</th></tr></thead>
+              <tbody>
+                <tr><td class="nowrap">周一</td><td>完全休息</td><td>800 米后先恢复；散步可以，不跑。</td></tr>
+                <tr><td class="nowrap">周二</td><td>20′ 轻松跑</td><td>仅无酸痛时进行；RPE 3–4，能说句子。</td></tr>
+                <tr><td class="nowrap">周三</td><td>完全休息</td><td>睡够；不补力量、不补速度。</td></tr>
+                <tr><td class="nowrap">周四</td><td>20′ 轻松跑</td><td>仍以恢复为主；出现疼痛就休息。</td></tr>
+                <tr><td class="nowrap">周五</td><td>完全休息</td><td>正常吃饭；准备第二天的测试装备。</td></tr>
+                <tr><td class="nowrap">周六</td><td><strong>1000 米基线测试</strong></td><td>热身 10′ + 测试 + 冷身 8′，总 21–23′。</td></tr>
+                <tr><td class="nowrap">周日</td><td>完全休息</td><td>记录睡眠、晨脉、肌肉酸痛与测试分段。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">若周二、周四仍有明显酸痛，直接改为休息，不为了“保持状态”硬跑。准备周的总训练量不是重点，获得一个可信基线才是。</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:20px">
+        <table>
+          <caption>基线分档后的第一步动作。周期估算见第 09 节，不要把“分档”误读成“保证”。</caption>
+          <thead><tr><th scope="col">1000 米基线</th><th scope="col">说明</th><th scope="col">第一步</th></tr></thead>
+          <tbody>
+            <tr><td class="num nowrap">低于 3:00</td><td>目标已达成。</td><td>再做一次确认测试（至少隔 2 周）；之后维持每周 1–2 次阈值 + 轻松跑，不追更短时间。</td></tr>
+            <tr><td class="num nowrap">3:00–3:10</td><td>离目标最近，但仍需把 1000 米配速稳定住。</td><td>进入 8 周核心周期；第 4 周先测一次，若已达标，不提前加码，按维持处理。</td></tr>
+            <tr><td class="num nowrap">3:10–3:20</td><td>最可能与当前 800 米水平匹配的区间。</td><td>按完整 8 周执行；第 4 周只看进步幅度，不因一次没到 3:00 就加练。</td></tr>
+            <tr><td class="num nowrap">3:20 以上</td><td>先补有氧与阈值基础，不把 3:00 当近期限。</td><td>先完成 8 周基础周期并复测；若仍高于 3:15，滚动重复 4–6 周，不照搬目标配速。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>如果暂时无法完成 1000 米测试</strong>
+        <p>不要用“800 米 2:31”直接冒充基线，也不要用一次全力 800 米替代。把 2:31 只当作临时参考，先做 1 周轻松跑与习惯建立；等到睡眠、身体和场地都合适时再测。没有基线，就不启动双阈值质量课，只做轻松跑和基础活动。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="principles" aria-labelledby="principles-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">03</div>
+        <div>
+          <p class="sec-kicker">Non-negotiable guardrails</p>
+          <h2 id="principles-title">不拔苗助长，不是口号，是课表结构</h2>
+          <p class="lede">这份计划把“安全”写进频率、间隔、单次时长、测试次数和降级规则里。你可以因为状态好而少做一组，但不能因为焦虑而多做一个双阈值日。</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="label">Six structural rules / 六条结构规则</span>
+          <ol class="rule-list">
+            <li><strong>先基线，后处方。</strong>没测 1000 米，不上目标配速课；第 1–2 周只做强度校准与习惯建立。</li>
+            <li><strong>渐进负荷。</strong>阈值总量按周小幅增加，第 4 周减量并测试，第 7 周再次减量；每 3–4 周必须有降载。</li>
+            <li><strong>每周至少 1 天完全休息。</strong>体育课、考试周、作业高峰都算总负荷；累了就降级，不补课。</li>
+            <li><strong>每周最多 1 次速度刺激。</strong>不排在双阈值日前一天；疲劳时直接取消。</li>
+            <li><strong>测试有配额。</strong>每 2 周最多 1 次 1000 米测试；本计划只把完整测试放在第 4、8 周。</li>
+            <li><strong>睡眠优先于训练。</strong>睡眠不足、晨脉连续升高、关节痛、学业明显受影响，当晚 LT2 直接降为轻松跑或休息。</li>
+          </ol>
+        </div>
+        <div class="card red">
+          <span class="label">Absolutely not / 绝不采用</span>
+          <h3>以下做法，哪怕“只这一次”也不做</h3>
+          <div class="ban-grid">
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>每天双练、天天双阈值，或把双阈值日连在一起。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>连续高强度、背靠背质量课，靠意志力硬顶。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>带伤硬顶、吃止痛药掩盖疼痛、疼痛时继续跑。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>空腹跑、刚吃完就跑，或用不吃饭来“控体重”。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>减少睡眠、压缩作业时间换取训练。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>频繁全力测 1000 米，把测试当训练。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>照搬雅各布原版大跑量、职业队双练节奏。</span></div>
+            <div class="ban"><span class="x" aria-hidden="true">×</span><span>用补剂、能量饮料、咖啡因或减重来“提速”。</span></div>
+          </div>
+          <div class="callout red" style="margin-bottom:0">
+            <strong>只记住一句也够</strong>
+            <p>宁可少练一次，不要少睡一小时；宁可把 LT2 降成轻松跑，不要带着疼痛完成它。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:16px">
+        <div class="card">
+          <span class="label">Why LT1</span>
+          <h3>第一阈值：把有氧底盘垫厚</h3>
+          <p>RPE 4–5，能说短句，心率约最大心率的 70%–80%。它的任务是让身体学会在不高昂的代价下反复工作，为后程和恢复能力买单。</p>
+        </div>
+        <div class="card">
+          <span class="label">Why LT2</span>
+          <h3>第二阈值：用受控的“硬”换比赛耐力</h3>
+          <p>RPE 7–8，只能说单词，但每组都能完成。它不是全力冲刺；若第 3 组就动作散、心率飙、配速崩，说明今天不配叫 LT2。</p>
+        </div>
+        <div class="card">
+          <span class="label">Why two sessions</span>
+          <h3>同一天两次，不等于两次拼命</h3>
+          <p>中午 LT1、晚上 LT2，中间至少 5 小时，让两次刺激都保持“次最大”。这比一次超长硬课更容易恢复，也更适合 20–30 分钟的时间上限。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="overview" aria-labelledby="overview-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">04</div>
+        <div>
+          <p class="sec-kicker">Eight-week architecture</p>
+          <h2 id="overview-title">周期总览：8 周主课表 + 1 个测试准备周</h2>
+          <p class="lede">主课表固定周三、周六为双阈值日，周一为速度刺激，周二/周四/周五为轻松跑，周日完全休息。第 4 周减量并做第一次 1000 米测试；第 7 周减量；第 8 周做最终测试。所有训练单次 20–30 分钟。</p>
+        </div>
+      </div>
+
+      <div class="microcycle" aria-label="标准训练周结构">
+        <div class="micro-day"><span class="dow">周一</span><b>速度 / 轻松</b><small>W1 轻松；W2 起 6×200</small></div>
+        <div class="micro-day"><span class="dow">周二</span><b>轻松跑</b><small>20′，RPE 3–4</small></div>
+        <div class="micro-day quality"><span class="dow">周三</span><b>双阈值</b><small>午 LT1 + 晚 LT2</small></div>
+        <div class="micro-day"><span class="dow">周四</span><b>轻松跑</b><small>20′，恢复优先</small></div>
+        <div class="micro-day"><span class="dow">周五</span><b>轻松跑</b><small>20′，不排速度</small></div>
+        <div class="micro-day quality"><span class="dow">周六</span><b>双阈值</b><small>午 LT1 + 晚 LT2</small></div>
+        <div class="micro-day rest"><span class="dow">周日</span><b>完全休息</b><small>不跑，不补课</small></div>
+      </div>
+
+      <p class="scroll-hint">← 手机上横向滑动查看完整周期表 →</p>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <caption>周总量以“训练分钟”计，含热身与冷身；不含走路、通勤和学校体育课。W0 不计入 8 周核心周期。</caption>
+          <thead>
+            <tr>
+              <th scope="col">周次</th>
+              <th scope="col">主题</th>
+              <th scope="col">双阈值日</th>
+              <th scope="col">速度 / 专项</th>
+              <th scope="col">轻松跑</th>
+              <th scope="col">完全休息</th>
+              <th scope="col">测试 / 减量</th>
+              <th scope="col">次数 / 总量</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nowrap"><strong>W0</strong></td>
+              <td>恢复 + 基线</td>
+              <td class="num">0</td>
+              <td>—</td>
+              <td class="num">2</td>
+              <td class="num">4 天</td>
+              <td>周六 1000 米基线测试</td>
+              <td class="num">3 次 / 61–63′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W1</strong></td>
+              <td>校准与习惯</td>
+              <td>周三、周六</td>
+              <td>—</td>
+              <td class="num">4</td>
+              <td class="num">周日</td>
+              <td>—</td>
+              <td class="num">8 次 / 176′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W2</strong></td>
+              <td>基础 + 速度唤醒</td>
+              <td>周三、周六</td>
+              <td>周一 6×200</td>
+              <td class="num">3</td>
+              <td class="num">周日</td>
+              <td>—</td>
+              <td class="num">8 次 / 185′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W3</strong></td>
+              <td>阈值扩容</td>
+              <td>周三、周六</td>
+              <td>周一 6×200</td>
+              <td class="num">3</td>
+              <td class="num">周日</td>
+              <td>—</td>
+              <td class="num">8 次 / 186′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W4</strong></td>
+              <td>减量 + 第一次测试</td>
+              <td>无</td>
+              <td>周六 1000 米测试</td>
+              <td class="num">3</td>
+              <td class="num">周三、周五、周日</td>
+              <td>1000 米测试 + 减量周</td>
+              <td class="num">4 次 / 81–83′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W5</strong></td>
+              <td>重建阈值</td>
+              <td>周三、周六</td>
+              <td>—</td>
+              <td class="num">4</td>
+              <td class="num">周日</td>
+              <td>—</td>
+              <td class="num">8 次 / 193′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W6</strong></td>
+              <td>接近目标配速</td>
+              <td>周三、周六</td>
+              <td>周一 4×400 + 分段时间</td>
+              <td class="num">3</td>
+              <td class="num">周日</td>
+              <td>过程里程碑，不测 1000</td>
+              <td class="num">8 次 / 194′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W7</strong></td>
+              <td>减量 + 唤醒</td>
+              <td>周三仅 1 次阈值</td>
+              <td>周一 4×400，轻量</td>
+              <td class="num">3</td>
+              <td class="num">周六、周日</td>
+              <td>减量周</td>
+              <td class="num">5 次 / 102′</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><strong>W8</strong></td>
+              <td>最终测试</td>
+              <td>无</td>
+              <td>周三 6×200 唤醒</td>
+              <td class="num">3</td>
+              <td class="num">周五、周日</td>
+              <td>周六 1000 米最终测试</td>
+              <td class="num">5 次 / 102–104′</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card green">
+          <span class="label">Scheduling logic</span>
+          <h3>为什么是周三 + 周六</h3>
+          <ul class="plain-list">
+            <li><strong>间隔足够：</strong>周三中午到周六中午约 72 小时，超过 48 小时底线；不是背靠背。</li>
+            <li><strong>恢复闭环：</strong>周六晚 LT2 结束后，周日全天完全休息，周一才做短速度课。</li>
+            <li><strong>避免“前一天速度”：</strong>速度课在周一，周二轻松，周三才是双阈值；不把刺激堆在阈值前一天。</li>
+            <li><strong>贴合上学节奏：</strong>周三用学校午休窗口，周六用周末固定窗口；两套作息都能对上。</li>
+          </ul>
+          <p class="small">如果学校周三中午无法安排 LT1，不要把两次都挤到晚上；当天降级为一次单阈值课或轻松跑，具体见第 10 节红线。</p>
+        </div>
+        <div class="card">
+          <span class="label">Load shape / 负荷形状</span>
+          <h3>不是每周都加量：一张“呼吸感”负荷图</h3>
+          <div class="timeline" aria-label="周训练量变化">
+            <div class="phase"><b>W0</b><span>测试</span></div>
+            <div class="phase"><b>W1</b><span>176′</span></div>
+            <div class="phase"><b>W2</b><span>185′</span></div>
+            <div class="phase"><b>W3</b><span>186′</span></div>
+            <div class="phase down"><b>W4</b><span>81–83′</span></div>
+            <div class="phase"><b>W5</b><span>193′</span></div>
+            <div class="phase"><b>W6</b><span>194′</span></div>
+            <div class="phase down"><b>W7</b><span>102′</span></div>
+            <div class="phase test"><b>W8</b><span>102–104′</span></div>
+          </div>
+          <p>第 1–2 周不追目标配速；第 3 周才把 LT2 的 2 分钟段推进到 3:55–4:10/公里；第 5–6 周才引入 76–78 秒的 400 米“目标配速桥梁”；真正的 72 秒/400 只在测试或比赛日兑现。</p>
+          <p class="small">W4 和 W7 的下降不是“掉状态”，而是让适应显形、让测试可信。减量周不补课，不因为“感觉还能跑”就加组。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="specific" aria-labelledby="specific-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">05</div>
+        <div>
+          <p class="sec-kicker">1000 m race craft</p>
+          <h2 id="specific-title">1000 米专项：用 200 米和 400 米，把配速“推”过去，不是“撞”过去</h2>
+          <p class="lede">你的最后 200 米能力来自速度底子，你的前 800 米能力来自阈值与轻松跑。专项课的任务不是每周跑一次全力 1000 米，而是把 200 米动作、400 米配速和 1000 米节奏拆开练，再在测试日合起来。</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="label">Pace conversion / 配速换算</span>
+          <h3>3:00 的每一段应该长什么样</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <thead><tr><th scope="col">距离</th><th scope="col">目标</th><th scope="col">用途</th></tr></thead>
+              <tbody>
+                <tr><td class="num">200 米</td><td class="num">36.0″</td><td>速度刺激、最后冲刺参照</td></tr>
+                <tr><td class="num">400 米</td><td class="num">72.0″</td><td>分段与比赛节奏</td></tr>
+                <tr><td class="num">600 米</td><td class="num">1:48.0</td><td>中段配速检查</td></tr>
+                <tr><td class="num">800 米</td><td class="num">2:24.0</td><td>决定最后 200 米怎么跑</td></tr>
+                <tr><td class="num">1000 米</td><td class="num">3:00.0</td><td>目标本身</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">36 秒/200 米既是目标配速，也是训练时的“可控快”，不是每组的极限。若 200 米跑成 33–34 秒、动作散、后面掉速，那不是速度好，是配速失控。</p>
+        </div>
+        <div class="card">
+          <span class="label">Race plan / 测试日分段</span>
+          <h3>前 600 米控住，最后 400 米才发力</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <thead><tr><th scope="col">分段</th><th scope="col">建议用时</th><th scope="col">累计</th><th scope="col">感觉</th></tr></thead>
+              <tbody>
+                <tr><td class="num">0–200</td><td class="num">36.0–36.5″</td><td class="num">0:36</td><td>轻松但受控，不冲</td></tr>
+                <tr><td class="num">200–400</td><td class="num">35.5–36.5″</td><td class="num">1:12</td><td>找到节奏</td></tr>
+                <tr><td class="num">400–600</td><td class="num">36.0–36.5″</td><td class="num">1:48</td><td>稳住，不提前搏命</td></tr>
+                <tr><td class="num">600–800</td><td class="num">35.5–36.0″</td><td class="num">2:24</td><td>开始加压</td></tr>
+                <tr><td class="num">800–1000</td><td class="num">34.5–35.5″</td><td class="num">2:59–3:00</td><td>最后 200 米放开</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">如果前 200 米跑到 34 秒以内，立刻收；如果 600 米已经超过 1:50，今天不要强行“追 3:00”，把后程跑完整，保留下一次测试。</p>
+        </div>
+      </div>
+
+      <p class="scroll-hint">← 手机上横向滑动查看专项推进表 →</p>
+      <div class="table-wrap" style="margin-top:18px">
+        <table class="table-wide">
+          <caption>专项推进路径。200 米速度刺激每周最多一次；400 米“目标配速桥梁”只出现在第 6、7 周；完整 1000 米测试只在第 4、8 周。</caption>
+          <thead>
+            <tr><th scope="col">阶段</th><th scope="col">主课</th><th scope="col">目标</th><th scope="col">RPE</th><th scope="col">组间</th><th scope="col">不要做什么</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nowrap">W2–W3</td>
+              <td>6×200 米 @ 38″ → 37–38″</td>
+              <td>建立目标配速的动作感，不抢秒</td>
+              <td class="num">8</td>
+              <td>走 1 分钟</td>
+              <td>不要因为第一组轻松就冲 34–35″。</td>
+            </tr>
+            <tr>
+              <td class="nowrap">W4</td>
+              <td>1000 米测试</td>
+              <td>记录五个 200 米分段；检查前快后崩</td>
+              <td class="num">9–10</td>
+              <td>—</td>
+              <td>不要在同一天补跑，不要测完立刻加组。</td>
+            </tr>
+            <tr>
+              <td class="nowrap">W5</td>
+              <td>阈值容量周，不加速专项</td>
+              <td>用 LT1/LT2 把后程底盘垫厚</td>
+              <td class="num">4–8</td>
+              <td>1 分钟慢跑</td>
+              <td>不要把测试后的兴奋变成连续高质量课。</td>
+            </tr>
+            <tr>
+              <td class="nowrap">W6</td>
+              <td>4×400 米 @ 76–78″</td>
+              <td>把 400 米节奏拉近目标；每组≤78″</td>
+              <td class="num">8</td>
+              <td>走 2 分钟</td>
+              <td>不要跑 72″；72″是测试日兑现，不是周中任务。</td>
+            </tr>
+            <tr>
+              <td class="nowrap">W7</td>
+              <td>4×400 米 @ 76–78″，减量</td>
+              <td>维持节奏，不追加组数</td>
+              <td class="num">7–8</td>
+              <td>走 2 分钟</td>
+              <td>不要用“感觉好”取消减量周。</td>
+            </tr>
+            <tr>
+              <td class="nowrap">W8</td>
+              <td>6×200 米 @ 36–38″ + 最终测试</td>
+              <td>唤醒，不疲劳；测试日跑出完整分段</td>
+              <td class="num">7–8 / 9–10</td>
+              <td>走 1 分钟</td>
+              <td>不要在测试前 48 小时加课或测 400 米。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card green">
+          <span class="label">The 400 m bridge</span>
+          <h3>为什么训练跑 76–78 秒，而不是天天 72 秒</h3>
+          <p>72 秒/400 是 3:00 的“比赛版本”，对 15 岁的你来说需要完整热身、测试或比赛环境、后程拼劲和恢复。周中反复跑 72 秒，会把速度课变成高强度测试，挤占第二天的恢复，也增加膝、踝、胫骨负荷。</p>
+          <p>76–78 秒是“目标配速桥梁”：比目标慢 4–6 秒，仍能训练 400 米的节奏、动作和乳酸耐受，但 RPE 控制在 8，组间走 2 分钟，保证每组质量。等到测试日，再把 72 秒交给比赛执行。</p>
+        </div>
+        <div class="card red">
+          <span class="label">Simulation quota</span>
+          <h3>模拟测试的配额：只有两次完整 1000 米</h3>
+          <ul class="plain-list">
+            <li><strong>W4：</strong>第一次完整测试，用来判断方向，不是“期末考”。</li>
+            <li><strong>W8：</strong>第二次完整测试，用来验证结果；若 W4 后出现红灯，可顺延，不硬测。</li>
+            <li><strong>W2/W6：</strong>评估节点，但用 200/400 米分段与 RPE 评估，不安排完整 1000 米。</li>
+            <li><strong>任何两周窗口：</strong>完整 1000 米测试不超过 1 次。不要把“测试”当训练刺激。</li>
+          </ul>
+          <p class="small">如果 W4 测试后 72 小时仍疲劳、睡眠变差或关节痛，取消 W6 的速度课，先恢复；周期可以延长，测试不能硬排。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="daily" aria-labelledby="daily-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">06</div>
+        <div>
+          <p class="sec-kicker">Day-by-day execution</p>
+          <h2 id="daily-title">逐日详细课表：每一课都能在 20–30 分钟内收工</h2>
+          <p class="lede">下面所有时间按“11:30 午餐、06:30 起床、22:30 睡觉”的上学日模板排。周三与周六为双阈值日，中午 LT1、晚上 LT2，两次间隔至少 5 小时；其余训练日每天最多一次。W4、W7、W8 是减量或测试周，不能把少掉的课补回来。</p>
+        </div>
+      </div>
+
+      <div class="callout blue">
+        <strong>先读这一条：课表里的“总时长”都已含热身与冷身</strong>
+        <p>所有质量课固定 5 分钟热身 + 5 分钟冷身；速度课另加 2 分钟慢跑过渡；1000 米测试用 10 分钟热身 + 8 分钟冷身。没有哪一课需要偷偷多跑 10 分钟。若学校时间被占用，直接降级，不把两段拼成一段。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="label">Session library / 单课模板</span>
+          <h3>课表只写代号，这里是完整结构</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <caption>热身固定 5′：2′慢跑 + 3′动态活动（高抬腿、后踢腿、弓步走、踝关节活动、摆腿）；冷身固定 5′：慢走/慢跑 2–3′ + 静态拉伸 2–3′（小腿、大腿前侧、大腿后侧、髋部各 2×20″）。速度课与测试课例外见备注。</caption>
+              <thead><tr><th scope="col">代号</th><th scope="col">结构</th><th scope="col">总时长</th><th scope="col">备注</th></tr></thead>
+              <tbody>
+                <tr><td><span class="session-code">E20</span></td><td>20′连续轻松跑，首尾各 2′走跑过渡</td><td class="num">20′</td><td>不设组间；RPE 3–4。</td></tr>
+                <tr><td><span class="session-code">A1</span></td><td>5′热身 + 3×3′ + 2×1′慢跑 + 5′冷身</td><td class="num">21′</td><td>LT1；组间 1′慢跑。</td></tr>
+                <tr><td><span class="session-code">A2</span></td><td>5′热身 + 4×3′ + 3×1′慢跑 + 5′冷身</td><td class="num">25′</td><td>LT1；组间 1′慢跑。</td></tr>
+                <tr><td><span class="session-code">A3</span></td><td>5′热身 + 4×4′ + 3×1′慢跑 + 5′冷身</td><td class="num">29′</td><td>LT1；组间 1′慢跑。</td></tr>
+                <tr><td><span class="session-code">A4</span></td><td>5′热身 + 5×3′ + 4×1′慢跑 + 5′冷身</td><td class="num">29′</td><td>LT1；组间 1′慢跑。</td></tr>
+                <tr><td><span class="session-code">B1</span></td><td>5′热身 + 6×2′ + 5×1′慢跑 + 5′冷身</td><td class="num">27′</td><td>LT2；组间 1′慢跑。</td></tr>
+                <tr><td><span class="session-code">B2</span></td><td>5′热身 + 7×2′ + 6×1′慢跑 + 5′冷身</td><td class="num">30′</td><td>LT2；组间 1′慢跑，正好卡上限。</td></tr>
+                <tr><td><span class="session-code">B3</span></td><td>5′热身 + 6×400m + 5×1′慢跑 + 5′冷身</td><td class="num">25′</td><td>LT2；400m 用时 94–102″。</td></tr>
+                <tr><td><span class="session-code">S1</span></td><td>5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身</td><td class="num">21′</td><td>200m 约 38″；组间走 1′。</td></tr>
+                <tr><td><span class="session-code">S2</span></td><td>5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身</td><td class="num">21′</td><td>200m 37–38″；组间走 1′。</td></tr>
+                <tr><td><span class="session-code">S3</span></td><td>5′热身 + 4×400m + 3×2′走 + 5′冷身</td><td class="num">21′</td><td>400m 76–78″；组间走 2′。</td></tr>
+                <tr><td><span class="session-code">S4</span></td><td>5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身</td><td class="num">21′</td><td>200m 36–38″；组间走 1′。</td></tr>
+                <tr><td><span class="session-code">T1000</span></td><td>10′热身 + 1000m 测试 + 8′冷身</td><td class="num">21–23′</td><td>热身含 2×60m 加速；测试前 48h 无高强度。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">代码表中没有“8×2 分钟”的 LT2 课。原因很直接：8×2′ 加 7′组间、再加最少 10′热身冷身是 33′，超过单次 30′硬上限。7×2′ 已经是本计划在 30′内能容纳的上限；不为了凑组数破坏上限。</p>
+        </div>
+        <div class="card">
+          <span class="label">Effort ladder / 强度标尺</span>
+          <h3>RPE 为主，心率为辅；两者冲突时听身体</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <caption>最大心率按 200 估算（15 岁仅为粗略参考，实际可能更高）。腕表有延迟，间歇中看组后 15 秒的读数；不要盯着表跑。</caption>
+              <thead><tr><th scope="col">类型</th><th scope="col">RPE</th><th scope="col">心率参考</th><th scope="col">说话测试</th></tr></thead>
+              <tbody>
+                <tr><td>轻松跑</td><td class="num">3–4</td><td class="num">&lt;140</td><td>能完整聊天</td></tr>
+                <tr><td>LT1</td><td class="num">4–5</td><td class="num">140–160</td><td>能说短句</td></tr>
+                <tr><td>LT2</td><td class="num">7–8</td><td class="num">170–180</td><td>只能说单词</td></tr>
+                <tr><td>200/400m 速度</td><td class="num">8</td><td class="num">180–190</td><td>强而可控，不憋气</td></tr>
+                <tr><td>1000m 测试</td><td class="num">9–10</td><td>接近个人最高</td><td>不能说话，测试专用</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout green" style="margin-bottom:0">
+            <strong>配速参考只负责“方向”</strong>
+            <p>LT1 4:20–4:40/公里；LT2 3:55–4:15/公里；200m 速度 36–38″；400m 桥梁 76–78″。如果心率/RPE 与配速冲突，先降速；不要为了“跑进某个数字”把 RPE 推到 9。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-head">
+          <div>
+            <h3>W1｜校准：先学会慢，再学会稳</h3>
+            <p>不追目标配速，只建立节奏、动作和记录习惯。双阈值日使用最短版本，宁可留余力。</p>
+          </div>
+          <div class="week-badges"><span class="pill green">8 次</span><span class="pill green">176′</span><span class="pill">周日全休</span><span class="pill orange">2 个双阈值日</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:10</td><td><span class="session-code">E20</span> 20′连续轻松跑；首尾 2′走跑过渡；不加快跑。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′连续轻松跑；能说完整句子为准。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:20</td><td><span class="session-code">A1</span> 5′热身 + 3×3′ + 2×1′慢跑 + 5′冷身；LT1 只求稳。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:35–4:40/km</td><td>1′慢跑</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周三 19:30–20:00</td><td><span class="session-code">B1</span> 5′热身 + 6×2′ + 5×1′慢跑 + 5′冷身；LT2 受控。</td><td class="num">7</td><td class="num">170–180</td><td class="num">4:10–4:15/km</td><td>1′慢跑</td><td class="num">27′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；腿沉就改为同时间快走，不跑。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；为周六留力，不做加速跑。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周六 13:00–13:25</td><td><span class="session-code">A1</span> 5′热身 + 3×3′ + 2×1′慢跑 + 5′冷身；与周三同结构。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:35–4:40/km</td><td>1′慢跑</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周六 19:30–20:00</td><td><span class="session-code">B1</span> 5′热身 + 6×2′ + 5×1′慢跑 + 5′冷身；做完即收。</td><td class="num">7</td><td class="num">170–180</td><td class="num">4:10–4:15/km</td><td>1′慢跑</td><td class="num">27′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：不跑、不补力量、不补速度；散步或轻松拉伸可选。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">间隔核对：周三 LT1 13:20 结束 → 周六 LT1 13:00 开始，约 71 小时 40 分；周三午/晚约 6 小时 10 分。周总量 80′ 轻松 + 96′ 阈值 = 176′。</div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-head">
+          <div>
+            <h3>W2｜加入短速度，阈值仍然保守</h3>
+            <p>周一 6×200 只做目标配速的“上沿”，不是全力冲。LT1/LT2 仍比 W1 略长，但配速不抢。</p>
+          </div>
+          <div class="week-badges"><span class="pill green">8 次</span><span class="pill green">185′</span><span class="pill">周日全休</span><span class="pill orange">2 个双阈值日</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:12</td><td><span class="session-code">S1</span> 5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身；第一组不抢。</td><td class="num">8</td><td class="num">180–190</td><td class="num">约 38″/200</td><td>走 1′</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；周一的腿酸不处理，只降速。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:20</td><td><span class="session-code">A2</span> 5′热身 + 4×3′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:30–4:40/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr><td class="nowrap">周三 19:30–20:00</td><td><span class="session-code">B1</span> 5′热身 + 6×2′ + 5×1′慢跑 + 5′冷身；每组结束还能说单词。</td><td class="num">7</td><td class="num">170–180</td><td class="num">4:05–4:15/km</td><td>1′慢跑</td><td class="num">27′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；不加速、不跨步。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；为周六双阈值留力。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周六 13:00–13:25</td><td><span class="session-code">A2</span> 5′热身 + 4×3′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:30–4:40/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr><td class="nowrap">周六 19:30–20:00</td><td><span class="session-code">B1</span> 5′热身 + 6×2′ + 5×1′慢跑 + 5′冷身。</td><td class="num">7</td><td class="num">170–180</td><td class="num">4:05–4:15/km</td><td>1′慢跑</td><td class="num">27′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：不为了“排酸”再跑；睡够 8–9 小时。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 21′ 速度 + 104′ 阈值 = 185′。速度课排在周一，离周三双阈值日仍有完整周二轻松日。</div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-head">
+          <div>
+            <h3>W3｜阈值扩容：第一次出现 7×2 分钟</h3>
+            <p>这是基础段的最高点之一。周六 LT2 改成 400 米重复，学习“每一圈都不崩”的节奏。</p>
+          </div>
+          <div class="week-badges"><span class="pill green">8 次</span><span class="pill green">186′</span><span class="pill">周日全休</span><span class="pill orange">2 个双阈值日</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:12</td><td><span class="session-code">S2</span> 5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身；目标是六组都稳定。</td><td class="num">8</td><td class="num">180–190</td><td class="num">37–38″/200</td><td>走 1′</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；RPE 不超过 4。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:20</td><td><span class="session-code">A2</span> 5′热身 + 4×3′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:25–4:35/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr><td class="nowrap">周三 19:30–20:00</td><td><span class="session-code">B2</span> 5′热身 + 7×2′ + 6×1′慢跑 + 5′冷身；这是 30′上限课，不能再加组。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">4:00–4:10/km</td><td>1′慢跑</td><td class="num">30′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；若周三晚睡不足 8 小时，本周六 LT2 降为轻松跑。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；不安排冲刺收尾。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周六 13:00–13:25</td><td><span class="session-code">A2</span> 5′热身 + 4×3′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:25–4:35/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr><td class="nowrap">周六 19:30–20:00</td><td><span class="session-code">B3</span> 5′热身 + 6×400m + 5×1′慢跑 + 5′冷身；400m 96–102″。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">3:55–4:15/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：为 W4 减量测试周做恢复准备。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 21′ 速度 + 105′ 阈值 = 186′。若 7×2′ 最后一组动作散，提前停在 6 组，不补。</div>
+      </div>
+
+      <div class="week-card down">
+        <div class="week-head">
+          <div>
+            <h3>W4｜减量 + 第一次 1000 米测试</h3>
+            <p>本周没有双阈值日，也没有速度课。测试不是“期末考”，而是校准方向；测完不补跑。</p>
+          </div>
+          <div class="week-badges"><span class="pill orange">4 次</span><span class="pill orange">81–83′</span><span class="pill">3 天全休</span><span class="pill red">1 次 1000m 测试</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；测试周不追量。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；最后 2′慢走。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周三</td><td><strong>完全休息</strong>：不跑；可做 5–8′非常轻的拉伸，不做出汗训练。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；不加速，不测 200。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周五</td><td><strong>完全休息</strong>：正常吃饭、早睡；准备测试装备。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="nowrap">周六 09:30–09:53</td><td><span class="session-code">T1000</span> 10′热身 + 1000m 测试 + 8′冷身；前 200m 37–38″，记五个分段。</td><td class="num">9–10</td><td>接近最高</td><td>前 200m 37–38″，后程匀速</td><td>—</td><td class="num">21–23′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：只记录睡眠、晨脉、酸痛和分段，不补跑。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 21–23′ 测试 = 81–83′。测试前后各 48 小时不安排高质量课；如果周六天气/身体不合适，顺延到周日，并把 W5 周三双阈值日改为单阈值。</div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-head">
+          <div>
+            <h3>W5｜重建：把测试结果放一边，先补阈值底盘</h3>
+            <p>测试后第一周不追“补偿”，也不因为成绩好就加课。LT1 拉到 4×4′，LT2 用 7×2′ 和 400 米重复分担。</p>
+          </div>
+          <div class="week-badges"><span class="pill green">8 次</span><span class="pill green">193′</span><span class="pill">周日全休</span><span class="pill orange">2 个双阈值日</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；测试后先恢复，不做速度。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；若仍疲劳，改为同时间快走。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:24</td><td><span class="session-code">A3</span> 5′热身 + 4×4′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4–5</td><td class="num">140–160</td><td class="num">4:20–4:35/km</td><td>1′慢跑</td><td class="num">29′</td></tr>
+              <tr><td class="nowrap">周三 19:30–20:00</td><td><span class="session-code">B2</span> 5′热身 + 7×2′ + 6×1′慢跑 + 5′冷身。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">3:55–4:10/km</td><td>1′慢跑</td><td class="num">30′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；腿沉就停，不补。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；为周六留力。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周六 13:00–13:29</td><td><span class="session-code">A3</span> 5′热身 + 4×4′ + 3×1′慢跑 + 5′冷身。</td><td class="num">4–5</td><td class="num">140–160</td><td class="num">4:20–4:35/km</td><td>1′慢跑</td><td class="num">29′</td></tr>
+              <tr><td class="nowrap">周六 19:30–20:00</td><td><span class="session-code">B3</span> 5′热身 + 6×400m + 5×1′慢跑 + 5′冷身；400m 94–100″。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">3:55–4:10/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：不补周中缺的组数。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 80′ 轻松 + 59′ 周三 + 54′ 周六 = 193′。4×4′ 的 LT1 已到 29′，不要再加第 5 组。</div>
+      </div>
+
+      <div class="week-card">
+        <div class="week-head">
+          <div>
+            <h3>W6｜目标配速桥梁：4×400 米进入 76–78 秒</h3>
+            <p>这是全程最“像比赛”的一周，但仍不跑 72 秒。周一是过程里程碑：四组都稳定，最后一组不崩。</p>
+          </div>
+          <div class="week-badges"><span class="pill green">8 次</span><span class="pill green">194′</span><span class="pill">周日全休</span><span class="pill orange">2 个双阈值日</span><span class="pill red">过程里程碑</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:11</td><td><span class="session-code">S3</span> 5′热身 + 4×400m + 3×2′走 + 5′冷身；四组 76–78″。</td><td class="num">8</td><td class="num">180–190</td><td class="num">76–78″/400</td><td>走 2′</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；不把 400 米“跑爽了”延续到周二。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:24</td><td><span class="session-code">A4</span> 5′热身 + 5×3′ + 4×1′慢跑 + 5′冷身。</td><td class="num">4–5</td><td class="num">140–160</td><td class="num">4:20–4:30/km</td><td>1′慢跑</td><td class="num">29′</td></tr>
+              <tr><td class="nowrap">周三 19:30–20:00</td><td><span class="session-code">B3</span> 5′热身 + 6×400m + 5×1′慢跑 + 5′冷身；400m 94–100″。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">3:55–4:10/km</td><td>1′慢跑</td><td class="num">25′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；RPE 超过 4 就减速。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；周六前不做 200 米加速。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周六 13:00–13:29</td><td><span class="session-code">A4</span> 5′热身 + 5×3′ + 4×1′慢跑 + 5′冷身。</td><td class="num">4–5</td><td class="num">140–160</td><td class="num">4:20–4:30/km</td><td>1′慢跑</td><td class="num">29′</td></tr>
+              <tr><td class="nowrap">周六 19:30–20:00</td><td><span class="session-code">B2</span> 5′热身 + 7×2′ + 6×1′慢跑 + 5′冷身。</td><td class="num">7–8</td><td class="num">170–180</td><td class="num">3:55–4:05/km</td><td>1′慢跑</td><td class="num">30′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：为 W7 减量周留出恢复空间。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 21′ 速度 + 113′ 阈值 = 194′。里程碑判定：四组 400 米全部 ≤78″、最后一组 ≤76–78″、RPE ≤8，才算稳定；若第 3 组就超过 80″，立即停，不补第 4 组。</div>
+      </div>
+
+      <div class="week-card down">
+        <div class="week-head">
+          <div>
+            <h3>W7｜减量 + 唤醒：少做，不是多做</h3>
+            <p>本周不安排双阈值日，只在周三保留一次短 LT1；周一保留轻量 400 米节奏。周六、周日连续休息。</p>
+          </div>
+          <div class="week-badges"><span class="pill orange">5 次</span><span class="pill orange">102′</span><span class="pill">周六、周日全休</span><span class="pill red">减量周</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:11</td><td><span class="session-code">S3</span> 5′热身 + 4×400m + 3×2′走 + 5′冷身；配速 76–78″，不追更快。</td><td class="num">7–8</td><td class="num">180–190</td><td class="num">76–78″/400</td><td>走 2′</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；减量周不加速。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:55–13:16</td><td><span class="session-code">A1</span> 5′热身 + 3×3′ + 2×1′慢跑 + 5′冷身；<strong>只做中午一次</strong>，晚上不跑。</td><td class="num">4</td><td class="num">140–160</td><td class="num">4:30–4:40/km</td><td>1′慢跑</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；为最终测试保睡眠。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周五 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；不做任何“最后一次冲一冲”。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周六</td><td><strong>完全休息</strong>：可以散步、做作业、睡午觉；不跑。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：准备 W8 最后一堂唤醒课。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 21′ 速度 + 21′ 阈值 = 102′。本周不补双阈值；如果周三中午被占用，直接取消阈值课，保留两次轻松跑，不做“晚间补课”。</div>
+      </div>
+
+      <div class="week-card down">
+        <div class="week-head">
+          <div>
+            <h3>W8｜最终测试：把前 600 米交给耐心，把最后 400 米交给训练</h3>
+            <p>周三只做短唤醒；周五全休；周六测试。目标不是“跑一个漂亮的前 200”，而是 3:00 以内完整跑完。</p>
+          </div>
+          <div class="week-badges"><span class="pill orange">5 次</span><span class="pill orange">102–104′</span><span class="pill">周五、周日全休</span><span class="pill red">最终 1000m 测试</span></div>
+        </div>
+        <p class="scroll-hint">← 横向滑动查看完整课表 →</p>
+        <div class="table-wrap">
+          <table class="table-days">
+            <thead><tr><th scope="col">日 / 时段</th><th scope="col">课次与内容</th><th scope="col">RPE</th><th scope="col">心率</th><th scope="col">配速参考</th><th scope="col">组间恢复</th><th scope="col">总时长</th></tr></thead>
+            <tbody>
+              <tr><td class="nowrap">周一 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；测试周不做力量或加速跑。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周二 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；最后 2′慢走。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr><td class="nowrap">周三 12:50–13:11</td><td><span class="session-code">S4</span> 5′热身 + 6×200m + 5×1′走 + 2′慢跑 + 5′冷身；200m 36–38″。</td><td class="num">7–8</td><td class="num">180–190</td><td class="num">36–38″/200</td><td>走 1′</td><td class="num">21′</td></tr>
+              <tr><td class="nowrap">周四 12:50–13:10</td><td><span class="session-code">E20</span> 20′轻松跑；只活动，不追求配速。</td><td class="num">3–4</td><td class="num">&lt;140</td><td class="num">6:00–6:40/km</td><td>—</td><td class="num">20′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周五</td><td><strong>完全休息</strong>：正常吃饭、早睡，不测 200、不试鞋。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="nowrap">周六 09:30–09:53</td><td><span class="session-code">T1000</span> 10′热身 + 1000m 最终测试 + 8′冷身；按 36/36/36/36/35.5 的分段执行。</td><td class="num">9–10</td><td>接近最高</td><td>前 200m 36–36.5″，后 200m 放开</td><td>—</td><td class="num">21–23′</td></tr>
+              <tr class="day-rest"><td class="nowrap">周日</td><td><strong>完全休息</strong>：记录成绩、分段、RPE 和恢复感受；不立刻安排下一轮测试。</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="week-foot">周总量 60′ 轻松 + 20–21′ 唤醒 + 21–23′ 测试 = 102–104′。若周五睡眠不足 7 小时，或晨脉连续两天升高，测试顺延，不硬跑。</div>
+      </div>
+
+      <div class="callout red">
+        <strong>学校日程冲突时，按这个顺序降级</strong>
+        <ul>
+          <li><strong>作业到 22:00 还没完：</strong>取消当晚 LT2，改 20′轻松跑或直接休息；作业和睡眠优先。</li>
+          <li><strong>学校体育课已跑 20 分钟以上：</strong>当天轻松跑取消；若当天是双阈值日，只保留中午 LT1，晚上休息。</li>
+          <li><strong>考试周：</strong>暂停双阈值日、速度课和测试；只保留 2–3 次 20′轻松跑，或完全休息。</li>
+          <li><strong>错过中午 LT1：</strong>晚上只做一次单阈值课；不把两次拼到晚上，不补到第二天。</li>
+          <li><strong>感冒、发热、咽痛、腹泻：</strong>不训练，恢复后再从轻松跑开始，至少 48 小时无高强度。</li>
+          <li><strong>出门旅行/天气差：</strong>用 20′轻松跑替代；没有安全场地就休息，不做折返冲刺。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="nutrition" aria-labelledby="nutrition-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">07</div>
+        <div>
+          <p class="sec-kicker">Fuel &amp; daily rhythm</p>
+          <h2 id="nutrition-title">每日作息与饮食模板：吃够、睡够，再谈配速</h2>
+          <p class="lede">不推荐补剂，不要求精确热量，不节食减重。你要做的是三餐规律、训练前后有合适的碳水、全天喝水，并让吃饭、午休、训练和睡觉互不打架。下面两套模板分别对应上学日和周末；周三、周六的双阈值日直接套用。</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="label">Plate model / 餐盘模型</span>
+          <h3>不用称重，用“拳头和手掌”估量</h3>
+          <ul class="plain-list">
+            <li><strong>主食：</strong>每餐约 1 个拳头（米饭/面/燕麦/馒头）；训练日不要减主食。</li>
+            <li><strong>蛋白质：</strong>每餐约 1 个手掌（鸡蛋、牛奶、鱼、鸡、瘦牛肉、豆腐）。</li>
+            <li><strong>蔬菜：</strong>每餐约 2 个拳头，颜色尽量多。</li>
+            <li><strong>水果/奶：</strong>每天 1–2 份水果、300–500ml 奶或酸奶。</li>
+            <li><strong>油脂：</strong>正常烹调即可，不额外喝油、不吃油炸当加餐。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Fuel timing / 训练前后</span>
+          <h3>不空腹，也不刚吃完就跑</h3>
+          <ul class="plain-list">
+            <li><strong>LT1 前 1–1.5 小时：</strong>午餐主食一小碗，七分饱；或香蕉 + 两片全麦面包。</li>
+            <li><strong>LT2 前 1.5–2 小时：</strong>晚餐正常吃，但不过饱；主食易消化，少油少辣。</li>
+            <li><strong>训练后 30–60 分钟：</strong>牛奶/酸奶 + 香蕉/小面包，补碳水 + 蛋白质。</li>
+            <li><strong>睡前 1 小时：</strong>只补水或少量牛奶；不吃大餐、不喝含咖啡因饮料。</li>
+            <li><strong>任何训练：</strong>空腹、刚吃完 1 小时内、明显腹胀时都不跑。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Micro &amp; minerals / 铁钙水</span>
+          <h3>初三男生最容易忽略的三件事</h3>
+          <ul class="plain-list">
+            <li><strong>铁：</strong>瘦牛肉/羊肉每周 2–3 次，动物肝脏每 1–2 周 1 次（可接受的话），配深色蔬菜和富含维生素 C 的水果；茶/咖啡不要随餐喝。</li>
+            <li><strong>钙：</strong>每天 300–500ml 奶或酸奶；豆腐、芝麻、深绿色蔬菜也能补。乳糖不耐受可选酸奶/无乳糖奶。</li>
+            <li><strong>水：</strong>全天 1.5–2L，训练前后分次喝；尿液淡黄为宜。大量出汗或高温时再考虑口服补液盐，不把含糖饮料当电解质。</li>
+          </ul>
+          <p class="small">如果长期乏力、头晕、心慌、脸色白，先看医生查铁/血常规，不要自己买铁剂或“能量补剂”。</p>
+        </div>
+      </div>
+
+      <div class="sched-grid">
+        <div class="card sched-card">
+          <div class="sched-head">
+            <h3>上学日模板｜周三双阈值日</h3>
+            <p>06:30 起床、22:30 睡觉；午餐与 LT1 间隔约 1 小时 5 分，晚餐与 LT2 间隔 1 小时 30 分。</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <caption>非双阈值日只保留中午一次训练（12:50–13:10），晚间不跑；餐点时间不变。</caption>
+              <thead><tr><th scope="col">时间</th><th scope="col">安排</th></tr></thead>
+              <tbody>
+                <tr><td>06:30</td><td>起床，先喝 200–300ml 温水；拉开窗帘，固定起床时间。</td></tr>
+                <tr><td>06:45–07:05</td><td><strong>早餐：</strong>碳水 + 蛋白质。例：燕麦/全麦面包 + 鸡蛋 + 牛奶 + 香蕉；不空腹上学。</td></tr>
+                <tr><td>11:30–11:50</td><td><strong>午餐：</strong>米饭一小碗 + 手掌大蛋白质 + 两拳蔬菜 + 汤；七分饱，作为 LT1 前主餐。</td></tr>
+                <tr><td>12:05–12:25</td><td><strong>午休：</strong>20 分钟，设闹钟；不超过 30 分钟，不睡到上课。</td></tr>
+                <tr><td>12:55–13:20</td><td><strong>中午 LT1：</strong>5′热身 + 3×3′ + 2×1′慢跑 + 5′冷身；RPE 4，能说短句。</td></tr>
+                <tr><td>13:25–13:35</td><td>擦汗、换衣；小加餐：半根香蕉 + 200ml 牛奶/酸奶，然后上课。</td></tr>
+                <tr><td>16:30</td><td><strong>放学加餐：</strong>水果 + 酸奶，或一片全麦面包 + 牛奶；不要用辣条、炸鸡、奶茶顶饿。</td></tr>
+                <tr><td>17:40–18:00</td><td><strong>晚餐：</strong>主食 3/4 碗 + 蛋白质 + 蔬菜；不过饱、不油腻，作为 LT2 前 1.5 小时的主餐。</td></tr>
+                <tr><td>18:10–19:15</td><td>先做需要纸笔的作业；若作业多，见下方“作业过多”规则，不牺牲睡眠。</td></tr>
+                <tr><td>19:30–20:00</td><td><strong>晚上 LT2：</strong>5′热身 + 6–7×2′ + 1′慢跑 + 5′冷身；RPE 7–8，只能说单词。</td></tr>
+                <tr><td>20:05–20:25</td><td>洗澡；补 200ml 牛奶或酸奶。LT2 结束到睡觉至少 2 小时。</td></tr>
+                <tr><td>20:30–21:30</td><td>继续作业/复盘；能纸质就纸质，屏幕任务尽量放在这一段完成。</td></tr>
+                <tr><td>21:30–22:20</td><td><strong>睡前 1 小时不看屏幕：</strong>洗漱、拉伸、阅读、准备第二天书包；不再讨论训练。</td></tr>
+                <tr><td>22:30</td><td><strong>熄灯睡觉。</strong>到 06:30 共 8 小时；周末也尽量不晚于 23:00。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note">若学校 12:00 才开午餐：午餐只吃七分饱并在 12:20 前结束，LT1 推迟到 13:20 后；若上课时间不允许，取消中午 LT1，晚上只做一次单阈值/轻松跑。不要 12:40 刚吃完就跑。</div>
+        </div>
+
+        <div class="card sched-card">
+          <div class="sched-head weekend">
+            <h3>周末模板｜周六双阈值日</h3>
+            <p>起床时间不晚于 07:00；周六仍按“午 LT1 + 晚 LT2”，周日完全休息并保持同样作息。</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <caption>周日的餐点时间可沿用；不安排训练。若周六需要出门，优先保证午/晚两次间隔≥5 小时，不把两次挤在一起。</caption>
+              <thead><tr><th scope="col">时间</th><th scope="col">安排</th></tr></thead>
+              <tbody>
+                <tr><td>06:30–07:00</td><td>起床，喝水；不因为周末睡到中午。固定起床比“补觉”更重要。</td></tr>
+                <tr><td>07:00–07:25</td><td><strong>早餐：</strong>鸡蛋 + 牛奶/豆浆 + 全麦主食 + 水果；吃够再出门。</td></tr>
+                <tr><td>09:30</td><td>小加餐：水果或酸奶；不空腹等到中午。</td></tr>
+                <tr><td>11:30–11:50</td><td><strong>午餐：</strong>正常均衡，七分饱；作为 13:00 LT1 前的主餐。</td></tr>
+                <tr><td>12:10–12:30</td><td><strong>午休：</strong>20 分钟；闹钟响就起，不超过 30 分钟。</td></tr>
+                <tr><td>13:00–13:25</td><td><strong>中午 LT1：</strong>5′热身 + 3–4×3′ + 1′慢跑 + 5′冷身；RPE 4。</td></tr>
+                <tr><td>13:30–13:45</td><td>小加餐 + 洗澡：牛奶/酸奶 + 香蕉或小面包。</td></tr>
+                <tr><td>16:30</td><td>下午加餐：水果 + 一小份碳水；避免炸物和含糖饮料。</td></tr>
+                <tr><td>17:40–18:00</td><td><strong>晚餐：</strong>主食 + 蛋白质 + 蔬菜，不过饱；离 19:30 LT2 约 1.5 小时。</td></tr>
+                <tr><td>19:30–20:00</td><td><strong>晚上 LT2：</strong>5′热身 + 6–7×2′ 或 6×400m + 1′慢跑 + 5′冷身；RPE 7–8。</td></tr>
+                <tr><td>20:05–20:25</td><td>洗澡，补 200ml 牛奶；不再加练。</td></tr>
+                <tr><td>21:30</td><td>停止屏幕；准备睡觉。周六晚 LT2 结束到 22:30 至少 2 小时。</td></tr>
+                <tr><td>22:30</td><td><strong>熄灯。</strong>周日同样 22:30 睡、06:30 起，不靠周末补觉。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note">周日是完整休息日：不跑、不补双阈值、不做“补偿性长距离”。可以散步、做轻拉伸、完成作业；正常三餐，不因为不训练就少吃。</div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px">
+        <div class="card">
+          <span class="label">Exam week / 考试周</span>
+          <h3>考试周只保规律，不保强度</h3>
+          <p>考试周暂停双阈值、速度课和 1000 米测试。保留 2–3 次 20 分钟轻松跑，或完全休息；三餐照常，早餐必须有主食和蛋白质，不因复习跳过正餐。不要用咖啡因饮料提神，也不要用“考完补练”报复性加课。</p>
+          <p class="small">如果考试周睡眠少于 7 小时，直接取消所有训练，先恢复睡眠。成绩和健康都比一次阈值课重要。</p>
+        </div>
+        <div class="card">
+          <span class="label">No supplements / 不做的饮食选择</span>
+          <h3>不节食、不补剂、不“控体重”</h3>
+          <ul class="plain-list">
+            <li>不计算热量、不称体重到小数点、不用“少吃”换更轻的身体。</li>
+            <li>不用蛋白粉、肌酸、氮泵、减肥茶、能量胶；这些不是初三学生的必需品。</li>
+            <li>不喝含咖啡因的能量饮料；不把奶茶、可乐当训练补水。</li>
+            <li>若医生诊断缺铁或其他问题，按医嘱处理；不要自行买补剂。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sleep" aria-labelledby="sleep-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">08</div>
+        <div>
+          <p class="sec-kicker">Recovery is part of the workout</p>
+          <h2 id="sleep-title">睡眠与恢复：训练不能向睡眠借时间</h2>
+          <p class="lede">每天目标 8–9 小时，固定起床与入睡时间；午休 20–30 分钟，不超过 30 分钟。晚上 LT2 结束到睡觉至少留 1.5–2 小时，睡前 1 小时不看屏幕。睡眠不足时，先砍训练，不砍睡眠。</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card green">
+          <span class="label">Night sleep / 夜间睡眠</span>
+          <h3>22:30–06:30 = 8 小时</h3>
+          <p>如果学校要求 06:00 起床，就把熄灯时间提前到 21:45–22:00。周末与上学日的起床时间差不超过 1 小时；不要用周日睡到中午来“补”一周的债。</p>
+          <p class="small">8–9 小时是目标，不是“睡够 7 小时也行”。睡眠不足会直接降低配速、增加用力感和受伤风险。</p>
+        </div>
+        <div class="card">
+          <span class="label">Nap / 午休</span>
+          <h3>20–30 分钟，设闹钟</h3>
+          <p>午休放在午饭后、LT1 前，或非训练日的午间。不要超过 30 分钟，不要在 15:00 后补长觉，否则晚上更难入睡。教室趴睡也可以，但别用午休替代夜间睡眠。</p>
+        </div>
+        <div class="card">
+          <span class="label">Buffer / 训练与睡眠之间</span>
+          <h3>LT2 最晚 20:00 结束</h3>
+          <p>本计划把 LT2 排在 19:30–20:00。结束后洗澡、补水、放松，22:30 睡觉，间隔 2.5 小时，满足至少 1.5–2 小时。若某天只能 20:45 后训练，直接降级为 20 分钟轻松跑或休息。</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card">
+          <span class="label">Readiness traffic light / 晨间自检</span>
+          <h3>早上 60 秒，决定今天怎么练</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <caption>晨脉：醒来后躺 1 分钟测，连续记录至少 3 天取平均。腕表夜测也可，但看趋势，不看单次。</caption>
+              <thead><tr><th scope="col">信号</th><th scope="col">绿灯</th><th scope="col">黄灯</th><th scope="col">红灯</th></tr></thead>
+              <tbody>
+                <tr><td>睡眠</td><td>≥8h</td><td>7–8h</td><td>&lt;7h 或连续两晚不足</td></tr>
+                <tr><td>晨脉</td><td>接近个人基线</td><td>比基线高 4–6 次/分</td><td>连续两天高 7 次/分以上</td></tr>
+                <tr><td>疼痛</td><td>无</td><td>轻微酸胀，≤2/10</td><td>关节痛、跛行、肿胀、夜间痛</td></tr>
+                <tr><td>状态</td><td>想吃、想动</td><td>发沉、犯困</td><td>发热、头晕、心慌、恶心</td></tr>
+                <tr><td>行动</td><td>按计划</td><td>只做轻松跑；取消速度/LT2</td><td>休息；必要时就医</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <span class="label">Sleep hygiene / 睡前流程</span>
+          <h3>21:30 以后，让大脑也“降速”</h3>
+          <ul class="tick-list">
+            <li>21:30 起不看手机、平板、电脑和电视；作业尽量在 21:30 前收尾。</li>
+            <li>睡前 1 小时不讨论成绩、不刷排名、不复盘训练失误。</li>
+            <li>卧室尽量暗、安静、凉爽；床只用来睡觉，不躺着刷题。</li>
+            <li>下午后不喝咖啡、浓茶、可乐和能量饮料。</li>
+            <li>如果躺下 20 分钟睡不着，起床做安静的纸质阅读，困了再回床。</li>
+          </ul>
+          <p class="small">持续失眠、早醒、白天无法集中注意力超过 2 周，先看医生，不要用训练“累到睡着”。</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>恢复不等于躺平</strong>
+        <p>轻松跑、散步、轻拉伸、规律吃饭和睡眠都是恢复。不要用“放松”名义加一次球赛、长时间逛街或熬夜打游戏；这些同样计入总负荷。学校体育课、课间跑操、考试周和作业高峰都要算进当天的“总账”。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="timeline" aria-labelledby="timeline-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">09</div>
+        <div>
+          <p class="sec-kicker">Conditional timeline</p>
+          <h2 id="timeline-title">最短安全周期：按基线分档，不按愿望倒推</h2>
+          <p class="lede">“最短安全周期”不是某个固定周数，而是在不突破睡眠、疼痛、学业和恢复红线的前提下，最早可以安全评估达标的窗口。下面以完整训练周计，不含 W0；8 周核心周期可以提前评估，也可以在需要时按 4 周块延长。</p>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <strong>没有完成 1000 米基线，就没有单一的“最短周期”</strong>
+        <p>任何人只凭“800 米 2:31”给出“X 周必到 3:00”，都是把估算当承诺。先用第 02 节的方法测出基线，再使用下面的分档；如果基线、睡眠或身体条件不满足，周期自动顺延。</p>
+      </div>
+
+      <div class="estimate-grid">
+        <article class="estimate close">
+          <span class="band">3:00–3:10</span>
+          <span class="band-note">离目标最近，但仍需把 1000 米配速稳定住</span>
+          <ul class="range-list">
+            <li><span>理想安全最短</span><b>4–6 周</b></li>
+            <li><span>更现实</span><b>6–8 周</b></li>
+            <li><span>保守</span><b>8–12 周</b></li>
+            <li><span>最早安全评估</span><b>W4</b></li>
+            <li><span>建议主课表</span><b>4 周首测，达标即维持</b></li>
+          </ul>
+          <p>第 4 周若已 sub3:00，不要提前加码；按维持训练到第 8 周再做一次确认。若 W4 仍在 3:05 左右，继续主课表，不靠“再拼一次”缩短。</p>
+        </article>
+        <article class="estimate">
+          <span class="band">3:10–3:20</span>
+          <span class="band-note">与当前 800 米水平最可能匹配的区间</span>
+          <ul class="range-list">
+            <li><span>理想安全最短</span><b>6–8 周</b></li>
+            <li><span>更现实</span><b>8–12 周</b></li>
+            <li><span>保守</span><b>12–16 周</b></li>
+            <li><span>最早安全评估</span><b>W4</b></li>
+            <li><span>建议主课表</span><b>8 周 + 复测</b></li>
+          </ul>
+          <p>这是最需要耐心的区间：速度底子够，但要把 1000 米后程的“续航”补起来。第 4 周只看进步和恢复，不因为没到 3:00 就加双阈值日。</p>
+        </article>
+        <article class="estimate long">
+          <span class="band">3:20 以上</span>
+          <span class="band-note">先补基础，不把 3:00 当最近期限</span>
+          <ul class="range-list">
+            <li><span>3:20–3:30 理想</span><b>10–12 周</b></li>
+            <li><span>3:20–3:30 现实</span><b>12–18 周</b></li>
+            <li><span>3:20–3:30 保守</span><b>18–24 周</b></li>
+            <li><span>&gt;3:30 现实</span><b>16–24 周</b></li>
+            <li><span>&gt;3:30 保守</span><b>24–36 周</b></li>
+          </ul>
+          <p>8 周核心周期通常只够完成第一轮基础；先复测，再按 4 周块滚动延长。若 3:30 以外，前期甚至不应频繁跑 3:00 配速；先把 LT1 和轻松跑做扎实。</p>
+        </article>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px">
+        <div class="card green">
+          <span class="label">Milestones / 关键节点</span>
+          <h3>第 2、4、6、8 周看什么</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <caption>只有第 4、8 周安排完整 1000 米测试；第 2、6 周是过程评估，不是“小号期末考”。每两周最多 1 次完整 1000 米测试。</caption>
+              <thead><tr><th scope="col">节点</th><th scope="col">评估内容</th><th scope="col">通过标准</th><th scope="col">不通过怎么办</th></tr></thead>
+              <tbody>
+                <tr><td class="nowrap">W2</td><td>6×200 米配速与动作</td><td>六组都能在 38–39″内、RPE≤8、动作不散</td><td>取消下周速度课，只保留双阈值与轻松跑。</td></tr>
+                <tr><td class="nowrap">W4</td><td>第一次完整 1000 米测试</td><td>完成测试；分段可解释；48 小时内恢复正常</td><td>不复测、不加练；先查睡眠、疼痛、配速，再延长 2–4 周。</td></tr>
+                <tr><td class="nowrap">W6</td><td>4×400 米 @76–78″</td><td>四组全部≤78″，最后一组≤76–78″，RPE≤8</td><td>把周一的 400 米改为轻松跑；不测 1000。</td></tr>
+                <tr><td class="nowrap">W8</td><td>第二次完整 1000 米测试</td><td>完整执行分段；无伤无痛；恢复可接受</td><td>记录结果、延长 4–8 周，不把一次失败当结论。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <span class="label">Prerequisites / 达标前提</span>
+          <h3>这些条件不满足，周期就不是“最短”</h3>
+          <ul class="tick-list">
+            <li>已完成一次可信的 1000 米基线，且知道五个 200 米分段。</li>
+            <li>健康前提下，双阈值日原则上不缺席；10 个双阈值日至少完成 8 个，缺席不补、周期顺延。</li>
+            <li>多数夜晚睡 8–9 小时；不是靠周末补觉、午休硬撑。</li>
+            <li>三餐规律，训练前不空腹、不刚吃完；蛋白质、铁、钙和水分基本达标。</li>
+            <li>无关节痛、无跛行、无持续疲劳；感冒发热时完全休息。</li>
+            <li>学业稳定；若训练明显影响作业、情绪或课堂专注，先降级。</li>
+            <li>学校体育课、考试周、额外球赛都计入总负荷，不叠加。</li>
+            <li>第 4、8 周测试条件一致：场地、天气、睡眠、前一餐和热身尽量相同。</li>
+            <li>接受“不一定在估算窗口内达标”，不把区间当欠条。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card">
+          <span class="label">What can extend it / 哪些情况会顺延</span>
+          <h3>延长周期不是失败，是修正</h3>
+          <ul class="plain-list">
+            <li>睡眠连续不足 8 小时，或考试周、作业高峰持续两周以上。</li>
+            <li>出现膝、踝、胫骨、脚跟疼痛，或感冒发热后过早恢复训练。</li>
+            <li>学校体育课、篮球/足球等额外运动没有从周总量里扣除。</li>
+            <li>测试前吃得太晚、热身不足、前 200 米冲太快，导致分段失真。</li>
+            <li>基线在 3:20 以上，或有明显铁不足、能量不足表现。</li>
+            <li>连续两周晨脉升高、RPE 变高、配速变慢，却仍硬顶。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">Extension rules / 滚动延长</span>
+          <h3>没到 3:00，下一轮怎么排</h3>
+          <ul class="plain-list">
+            <li><strong>3:00–3:05：</strong>延长 4 周，重复 W5–W7 结构，最后一周测试；不加快速度课频率。</li>
+            <li><strong>3:05–3:15：</strong>延长 6–8 周，先重复 W1–W3 的基础段，再进入 W5–W8；每周仍只 2 个双阈值日。</li>
+            <li><strong>3:15 以上：</strong>回到基础段 4 周，优先 LT1、轻松跑和睡眠；不把 3:00 配速当周中任务。</li>
+            <li><strong>任意延长块：</strong>每 4 周至少 1 个减量周；完整 1000 米测试间隔至少 4 周，除非医生/教练另有安排。</li>
+          </ul>
+          <p class="small">延长不是简单重复到“撞线”，而是每 4 周复测一次、每次只改一个变量。不要同时加量、加速、减睡眠。</p>
+        </div>
+      </div>
+
+      <div class="keyline">
+        <strong>底线复述：</strong>如果“最短周期”和安全恢复冲突，以安全最短为准。达标窗口是条件式估算，不是保证；若第 4 周或第 8 周未达标，最正确的动作是复查睡眠、疼痛、配速和总负荷，而不是把双阈值日加到每周三次。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="redlines" aria-labelledby="redlines-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">10</div>
+        <div>
+          <p class="sec-kicker">Hard stop rules</p>
+          <h2 id="redlines-title">执行红线：出现一条，就降级或休息</h2>
+          <p class="lede">红线不是“建议”，而是当天的硬规则。任何一条出现，都先取消 LT2/速度/测试；不能用“最短周期”“已经排好了”“就这一次”来突破。降级不是偷懒，是把训练窗口留给下一次。</p>
+        </div>
+      </div>
+
+      <p class="scroll-hint">← 手机上横向滑动查看红线表 →</p>
+      <div class="table-wrap">
+        <table class="table-wide red-table">
+          <caption>先处理信号，再谈课表。若症状持续超过 3 天、加重，或出现胸痛、晕厥、明显气短、关节肿胀，直接就医。</caption>
+          <thead><tr><th scope="col">红灯信号</th><th scope="col">判定线</th><th scope="col">当天行动</th><th scope="col">后续</th></tr></thead>
+          <tbody>
+            <tr><td>静息心率连续升高</td><td>连续 2 个早晨比个人基线高 7 次/分以上，或单次高 10 次/分以上</td><td>取消阈值/速度/测试，改完全休息</td><td>连续 2 天正常后再从轻松跑恢复；查睡眠、脱水、感冒。</td></tr>
+            <tr><td>关节持续疼痛</td><td>膝、踝、髋、脚跟疼痛 ≥3/10，或跛行、肿胀、夜间痛</td><td>立即停止跑步；不用止痛药掩盖</td><td>&gt;3 天不缓解或负重痛，就医/找专业教练评估。</td></tr>
+            <tr><td>睡眠不足</td><td>当晚不足 7 小时，或连续两晚不足 7.5 小时</td><td>取消 LT2 或速度；只保留轻松跑/休息</td><td>先补睡眠，不补训练；下一课不“加回来”。</td></tr>
+            <tr><td>LT2 课无法维持 RPE 8 以内</td><td>第 2–3 组就动作散、憋气、配速明显掉，或 RPE 超过 8</td><td>立即停课，剩余组不做</td><td>下一次降为轻松跑；连续两次出现，回到基础段。</td></tr>
+            <tr><td>1000 米测试后恢复缓慢</td><td>48 小时仍明显疲劳，72 小时仍腿沉/睡眠变差/晨脉高</td><td>取消下一次质量课，改休息</td><td>至少再等 48 小时；恢复后先轻松跑，不补测。</td></tr>
+            <tr><td>学业明显受影响</td><td>作业连续拖到 22:30 后、课堂专注下降、考试/情绪明显变差</td><td>取消当晚训练；考试周停双阈值</td><td>先恢复作息与学习节奏，再谈训练；必要时暂停 1 周。</td></tr>
+            <tr><td>感冒、发热、咽痛、腹泻</td><td>体温升高、全身酸痛、咳嗽明显、呕吐/腹泻</td><td>完全休息，不跑</td><td>症状消失后至少 48 小时无高强度；发热后先轻松跑 2–3 次。</td></tr>
+            <tr><td>空腹或刚吃完就跑</td><td>训练前未进食超过 5 小时，或正餐后不足 1 小时</td><td>取消本次训练或改 20′轻松走</td><td>下一次提前 1–1.5 小时吃少量碳水；不靠意志力硬撑。</td></tr>
+            <tr><td>带伤硬顶</td><td>疼痛中跑、吃止痛药跑、贴膏药后继续跑</td><td>立即停止</td><td>找医生/专业教练；恢复训练要循序渐进，不直接回双阈值。</td></tr>
+            <tr><td>其他异常</td><td>胸痛、晕厥、心悸、异常气短、持续头晕、情绪持续低落</td><td>停止训练</td><td>及时就医；不要用“再跑一次看看”试探。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card red">
+          <span class="label">No make-up / 不补课</span>
+          <h3>错过的课，不会变成欠条</h3>
+          <p>错过中午 LT1，不要晚上补两次；错过周三双阈值，不要周六加一次；错过一周，不要下一周加量补回来。训练适应来自长期稳定的刺激和恢复，不来自“把缺的补上”。</p>
+          <ul class="plain-list">
+            <li>漏一次：下一次按原计划，不追加距离。</li>
+            <li>漏一周：从轻松跑恢复，先做 1 周基础，再回双阈值。</li>
+            <li>受伤/生病：按医生或专业教练的回归方案，不用本表硬套。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">If in doubt / 不确定时</span>
+          <h3>宁可少做，不要做错</h3>
+          <p>如果当天你在“要不要跑”之间犹豫，先问三个问题：昨晚睡够 8 小时了吗？今天走路/上下楼有痛吗？静息心率比平时高吗？任何一个答案不对，就把课降为 20 分钟轻松跑或完全休息。</p>
+          <p>如果症状在 3 天内没有好转，或你需要止痛药才能完成日常活动，停止训练并就医。不要让“初三了、时间紧”成为忽视身体的理由。</p>
+          <div class="pill-row">
+            <span class="pill red">疼痛不跑</span>
+            <span class="pill red">发热不跑</span>
+            <span class="pill red">缺觉不跑强度</span>
+            <span class="pill red">不补课</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="jakob" aria-labelledby="jakob-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">11</div>
+        <div>
+          <p class="sec-kicker">Why this is a downgraded version</p>
+          <h2 id="jakob-title">与雅各布原版双阈值的关键区别：保留内核，拒绝照搬</h2>
+          <p class="lede">雅各布·英厄布里格森的双阈值训练，核心不是“每天跑两次”，而是把阈值刺激拆成可控的多次、在两次之间留足恢复，并把轻松跑和恢复当成训练的一部分。这个内核可以学；职业运动员的跑量、频率、保障团队和恢复条件，不能照搬到一个每天只有 20–30 分钟、还要上初三的人身上。</p>
+        </div>
+      </div>
+
+      <p class="scroll-hint">← 手机上横向滑动查看对比表 →</p>
+      <div class="table-wrap">
+        <table class="table-wide compare-table">
+          <caption>“降维”不是把原版随便打折，而是按年龄、时间、恢复和学业重新设计剂量。</caption>
+          <thead><tr><th scope="col">维度</th><th scope="col">雅各布原版（职业成年运动员）</th><th scope="col">本计划（初三男生）</th><th scope="col">为什么必须这样改</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>周跑量</td>
+              <td>常被报道为每周 100 公里以上的大跑量，且有多年基础。</td>
+              <td>约 25–32 公里/周，以时间控制，不追里程。</td>
+              <td>骨骼、肌腱和内分泌仍在发育；大跑量会放大应力性损伤、能量不足和睡眠债风险。</td>
+            </tr>
+            <tr>
+              <td>双阈值频率</td>
+              <td>职业队可在多日安排双阈值，训练外全天用于恢复。</td>
+              <td>每周固定 2 天，周三、周六，间隔约 72 小时。</td>
+              <td>15 岁学生的恢复窗口被学校、作业和通勤切碎；2 天已能提供足够刺激。</td>
+            </tr>
+            <tr>
+              <td>单次时长</td>
+              <td>职业课常远长于 30 分钟，并有完整保障。</td>
+              <td>每次含热身冷身 20–30 分钟，主课短分段。</td>
+              <td>这是用户硬上限；超过上限的“补量”会直接侵占睡眠和作业。</td>
+            </tr>
+            <tr>
+              <td>强度控制</td>
+              <td>职业队用乳酸、配速、心率、教练观察等多重手段。</td>
+              <td>RPE 为主，心率为辅；不扎手指测乳酸。</td>
+              <td>家庭场景没有乳酸检测条件，RPE + 心率足以守住“次最大”的边界。</td>
+            </tr>
+            <tr>
+              <td>速度课</td>
+              <td>速度、力量、技术训练量大且系统。</td>
+              <td>每周最多 1 次短速度刺激；200 米 36–38 秒，400 米 76–78 秒。</td>
+              <td>先保住动作和恢复，不为“刺激”而堆高强度；800 米底子已经够用。</td>
+            </tr>
+            <tr>
+              <td>恢复条件</td>
+              <td>职业运动员有午睡、理疗、营养、海拔训练和专职团队。</td>
+              <td>8–9 小时睡眠、20–30 分钟午休、三餐规律、每周至少 1 天全休。</td>
+              <td>恢复资源少，就必须把训练剂量压低；不能用职业选手的课表配学生的恢复。</td>
+            </tr>
+            <tr>
+              <td>测试频率</td>
+              <td>以比赛和教练安排为主，测试是训练的一部分。</td>
+              <td>8 周核心周期只做 2 次完整 1000 米测试；每 2 周最多 1 次。</td>
+              <td>频繁全力测试会制造“假进步”和真疲劳；测试应该少而可信。</td>
+            </tr>
+            <tr>
+              <td>目标</td>
+              <td>世界级比赛成绩与长期职业发展。</td>
+              <td>1000 米跑进 3:00，同时不牺牲健康、睡眠和学业。</td>
+              <td>目标不同，最优剂量就不同；学生运动员的第一优先级是可持续。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card green">
+          <span class="label">What we keep / 保留的内核</span>
+          <h3>双阈值不是“多跑”，是“分次、控强度、留恢复”</h3>
+          <ul class="tick-list">
+            <li>每周 2 个双阈值日，中午 LT1、晚上 LT2，中间至少 5 小时。</li>
+            <li>LT1  conversational（能说短句），LT2 只能说单词但能完成分段。</li>
+            <li>两次刺激都保持次最大，不把任何一次变成比赛。</li>
+            <li>轻松跑真的轻松，完全休息真的完全休息。</li>
+            <li>用短分段控制单次压力：3–4 分钟、2 分钟、400 米重复。</li>
+            <li>用 RPE 和心率守住强度，不靠“今天感觉能冲”加码。</li>
+          </ul>
+        </div>
+        <div class="card red">
+          <span class="label">What we remove / 必须拿掉</span>
+          <h3>为什么不能照搬大跑量</h3>
+          <ul class="plain-list">
+            <li><strong>骨骼与生长板：</strong>青少年骨骼仍在生长，重复高冲击 + 大跑量会增加胫骨、跟骨、膝周疼痛风险。</li>
+            <li><strong>能量与铁：</strong>大跑量叠加学业压力，容易吃不够、铁不足，表现为越练越沉、心慌、头晕。</li>
+            <li><strong>睡眠与学业：</strong>职业选手训练后可以全天恢复；初三学生还要上课、写作业、考试。</li>
+            <li><strong>恢复团队：</strong>没有理疗、营养师、午睡保障和教练每日观察，就不能使用同一剂量。</li>
+            <li><strong>心理负担：</strong>每天双练会把“跑步”变成第二份作业，增加厌跑和焦虑风险。</li>
+            <li><strong>收益递减：</strong>1000 米目标不需要职业跑量；20–30 分钟的高质量短课已经能提供足够刺激。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <strong>一句话：不要用职业选手的课表，去配一个初三学生的恢复</strong>
+        <p>照搬雅各布的大跑量，不会自动得到雅各布的成绩；更可能得到的是恢复债、疼痛和成绩停滞。真正值得学的是他的“控强度”和“把轻松跑跑轻松”，不是“每天跑两次”的表面形式。</p>
+      </div>
+
+      <div class="comparison-note small" style="margin-top:12px">说明：上表中的职业训练描述为公开报道中的典型印象，用于解释训练原则差异，不是对雅各布个人训练日志的逐日复刻。青少年训练应优先遵循本地医生、学校体育老师和专业教练的个体化建议。</div>
+    </div>
+  </section>
+
+  <section class="section" id="risks" aria-labelledby="risks-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="sec-num">12</div>
+        <div>
+          <p class="sec-kicker">What remains uncertain</p>
+          <h2 id="risks-title">风险、未保证项与最终底线</h2>
+          <p class="lede">这份计划能给你一个安全、可执行、可检查的框架，但不能替你保证个体反应。成长节奏、睡眠、学业压力、铁营养、场地天气和测试当天的状态，都会改变结果。把不确定性留在桌面上，比用“必到 3:00”制造压力更负责。</p>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <strong>明确不保证</strong>
+        <p>不能保证你 8 周一定跑进 3:00；不能保证基线一定落在某个区间；不能保证你不受伤；不能保证考试周仍能完成所有课。能保证的是：不安排每天双练、不安排连续高强度、不鼓励带伤/空腹/缺觉硬顶，并给出一套出现红灯就停下来的规则。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="label">Growth / 生长与损伤</span>
+          <h3>膝、踝、胫骨、脚跟最需要留意</h3>
+          <p>青春期骨骼生长快，肌腱和骨骼对负荷的适应速度不一定同步。跑步量突然增加、鞋底磨损、硬地反复冲刺，都可能让胫骨或膝周出现疼痛。疼痛不是“变强的必经之路”，尤其是局部、点状、负重加重的疼痛。</p>
+          <p class="small">处理：减量或停跑；不贴膏药后继续跑；3 天不缓解或跛行，找医生/专业教练。</p>
+        </div>
+        <div class="card">
+          <span class="label">Energy / 吃与恢复</span>
+          <h3>越练越沉，可能不是“意志力差”</h3>
+          <p>初三课业紧、训练时间碎，最容易出现早餐随便、午餐凑合、晚餐过晚。能量和铁不足会表现为心慌、头晕、怕冷、注意力差、配速无缘无故变慢。这时加练没有用，先吃饭、睡觉、查血。</p>
+          <p class="small">处理：三餐规律；红肉/豆类/深色蔬菜；不自行补铁；症状明显就医。</p>
+        </div>
+        <div class="card">
+          <span class="label">Load / 总负荷</span>
+          <h3>体育课和球赛不是“免费训练”</h3>
+          <p>学校体育课、课间跑操、篮球/足球、长时间走路和熬夜都计入总负荷。如果当天已经跑了很多，轻松跑可以取消，双阈值日的晚间 LT2 可以降级。不要只看“跑表上的训练”，要看一整天的消耗。</p>
+          <p class="small">处理：当天总负荷高，就砍质量课；不把训练表当成必须完成的打卡任务。</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card">
+          <span class="label">Test-day uncertainty / 测试日变量</span>
+          <h3>一次测试不等于永久水平</h3>
+          <ul class="plain-list">
+            <li>起跑太快、前 200 米冲到 34 秒，后程会付出更大代价。</li>
+            <li>高温、逆风、睡眠不足、刚吃完或空腹，都会让成绩失真。</li>
+            <li>第一次在跑道上测 1000 米，配速感本身就需要学习。</li>
+            <li>W4 和 W8 的测试条件应尽量一致，才有可比性。</li>
+            <li>如果 W4 成绩不理想，先看分段和恢复，不要当天再加测。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="label">If W8 is not sub3 / 如果最终没到</span>
+          <h3>不崩盘、不报复性加练</h3>
+          <div class="table-wrap table-compact">
+            <table>
+              <thead><tr><th scope="col">结果</th><th scope="col">下一步</th><th scope="col">不要再做</th></tr></thead>
+              <tbody>
+                <tr><td class="num">3:00–3:05</td><td>延长 4 周，重复 W5–W7，再测一次。</td><td>每周加第三次双阈值。</td></tr>
+                <tr><td class="num">3:05–3:15</td><td>先回基础段 4 周，再走 4–6 周阈值与目标配速桥梁。</td><td>连续两周测 1000。</td></tr>
+                <tr><td class="num">&gt;3:15</td><td>以 8–12 周为延长块，优先 LT1、轻松跑、睡眠与铁营养。</td><td>用 3:00 配速硬顶、节食减重。</td></tr>
+                <tr><td class="num">有疼痛/生病</td><td>停止训练，先就医或休息；回归时从轻松跑开始。</td><td>带伤测试、吃止痛药跑。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small">如果 W8 已 sub3:00：先维持 2–3 周（每周 1 个双阈值日 + 2–3 次轻松跑），不要马上追 2:55；完成一次恢复周后，再决定是否进入下一周期。</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:18px">
+        <table>
+          <caption>出现以下情况，停止训练并寻求医疗帮助；不要用“再跑一次看看”来试探。</caption>
+          <thead><tr><th scope="col">需要就医/专业评估的信号</th><th scope="col">为什么不能硬顶</th></tr></thead>
+          <tbody>
+            <tr><td>胸痛、晕厥、明显心悸、异常气短</td><td>可能涉及心血管或呼吸系统问题，运动不是诊断工具。</td></tr>
+            <tr><td>关节肿胀、跛行、夜间痛、局部骨点压痛</td><td>可能是关节/骨骼负荷损伤，继续跑会延长恢复期。</td></tr>
+            <tr><td>发热、持续咳嗽、呕吐/腹泻后乏力</td><td>感染期训练会增加心肌炎、脱水等风险。</td></tr>
+            <tr><td>持续头晕、脸色苍白、心慌、异常怕冷</td><td>可能提示贫血/能量不足，需检查而不是加练。</td></tr>
+            <tr><td>情绪持续低落、严重焦虑、失眠超过 2 周</td><td>睡眠与心理健康优先，训练应暂停或大幅降级。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bottom-grid">
+        <div class="card green">
+          <span class="label">What to log / 每次只记 5 项</span>
+          <h3>让调整有依据，而不是靠感觉</h3>
+          <div class="table-wrap table-compact">
+            <table class="log-table">
+              <thead><tr><th scope="col">字段</th><th scope="col">怎么记</th></tr></thead>
+              <tbody>
+                <tr><td>睡眠</td><td>昨晚实际睡了几小时；是否中途醒。</td></tr>
+                <tr><td>晨脉</td><td>醒来躺 1 分钟测；记录趋势，不看单次。</td></tr>
+                <tr><td>RPE</td><td>整课 1–10；LT2 是否守住 ≤8。</td></tr>
+                <tr><td>疼痛</td><td>0–10，写部位；有痛就记录，不“忍过去”。</td></tr>
+                <tr><td>分段</td><td>200/400 米用时；测试记五个 200 米。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <span class="label">Final bottom line / 最终底线</span>
+          <h3>先测，再练；有红灯，就停</h3>
+          <p>每周只安排 2 个双阈值日，两个双阈值日之间至少间隔 48 小时；每次含热身冷身 20–30 分钟；每周至少 1 天完全休息；速度刺激每周最多 1 次，且不排在双阈值日前一天；睡眠目标 8–9 小时；每 2 周最多 1 次完整 1000 米测试。</p>
+          <p>做到这些，3:00 值得认真期待；但身体不欠你一个日期。最短周期必须服从安全恢复，不能反过来。</p>
+          <div class="pill-row">
+            <span class="pill green">2 个双阈值日 / 周</span>
+            <span class="pill green">20–30 分钟 / 次</span>
+            <span class="pill green">≥1 天全休</span>
+            <span class="pill orange">8–9 小时睡眠</span>
+            <span class="pill red">红灯即停</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyline">
+        <strong>把这句话记住：</strong>你不是在准备一场职业比赛，你是在长身体、上初三、同时练 1000 米。训练应该让你更有力，而不是让你更困、更痛、更害怕下一次课。若计划与这个目标冲突，改计划。
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>安全提示：</strong>开始前若存在心肺、骨骼、生长发育或既往运动损伤问题，请先咨询医生。计划中的周期均为条件式估算，不构成成绩保证。</p>
+    <a class="top-link" href="#top">回到顶部 ↑</a>
+  </div>
+  <div class="wrap footer-final">
+    <p>本计划为训练建议，不替代医生或专业教练的个体化诊断；出现伤病或明显不适请停止训练并求助。</p>
+  </div>
+</footer>
+</body>
+</html>
