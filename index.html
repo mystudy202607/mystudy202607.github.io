@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>状元作战图 · 最终版｜目标 733</title><style>
+:root{
+  --paper:#f5f0e6;--paper-2:#fffdf8;--ink:#13251f;--ink-soft:#41524a;--muted:#6d7872;
+  --line:#ddd5c6;--line-soft:#ece5d8;--green:#1f5b48;--green-pale:#e8f0ea;
+  --orange:#b84424;--orange-pale:#f9e7dd;--blue:#315f78;--blue-pale:#e7eff4;
+  --gold:#a47832;--gold-pale:#f6edd9;--radius:14px;--shadow:0 14px 36px rgba(19,37,31,.07);
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:var(--paper);
+ font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;font-size:15px;line-height:1.7}
+a{color:var(--green);text-underline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:30px 20px 60px}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+
+.hero{background:linear-gradient(135deg,#fffdf8,#f7f2e7);border:1px solid var(--line);
+ border-radius:20px;padding:28px 30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;
+ background:radial-gradient(circle,rgba(164,120,50,.18),transparent 70%)}
+.kicker{font-size:12px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+h1{font-size:32px;margin:8px 0 4px;line-height:1.2}
+.sub{color:var(--ink-soft);font-size:14px;margin:0}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+.num{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:12px;padding:11px 13px}
+.num b{display:block;font-size:22px;line-height:1.2;color:var(--green)}
+.num span{font-size:12px;color:var(--muted)}
+.num.o b{color:var(--orange)} .num.g b{color:var(--gold)} .num.b b{color:var(--blue)}
+
+h2{font-size:19px;margin:34px 0 10px;padding-left:12px;border-left:5px solid var(--green)}
+h2 small{font-weight:400;font-size:12.5px;color:var(--muted);margin-left:8px}
+h3{font-size:15.5px;margin:16px 0 6px;color:var(--green)}
+p{margin:6px 0}
+
+table{width:100%;border-collapse:collapse;background:var(--paper-2);border-radius:12px;overflow:hidden;
+ box-shadow:0 6px 18px rgba(19,37,31,.05);font-size:13.5px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{background:var(--green-pale);color:var(--green);font-size:12.5px;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.c,th.c{text-align:center}
+tr.sum td{background:var(--gold-pale);font-weight:700}
+.gap{color:var(--orange);font-weight:700}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.pill.a{background:var(--orange-pale);color:var(--orange)}
+.pill.b{background:var(--green-pale);color:var(--green)}
+.pill.c{background:var(--blue-pale);color:var(--blue)}
+.pill.d{background:var(--gold-pale);color:var(--gold)}
+
+.law{background:#fdf6f4;border:1px solid #eecdbd;border-radius:var(--radius);padding:14px 18px}
+.law ol{margin:0;padding-left:20px}
+.law li{margin:5px 0}
+
+/* week cards */
+.weeks{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:8px}
+.wk{min-width:0;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:var(--radius);
+ padding:16px 18px;box-shadow:0 6px 18px rgba(19,37,31,.05)}
+.wk header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;
+ border-bottom:1px dashed var(--line);padding-bottom:8px;margin-bottom:8px}
+.wk header b{font-size:16px}
+.wk header em{font-style:normal;color:var(--muted);font-size:12.5px}
+.wk .target{font-size:12.5px;color:var(--gold);font-weight:700}
+.wk table{box-shadow:none;font-size:12.5px;margin:6px 0}
+.wk th{background:#f3f7f2;font-size:11.5px}
+.wk .tips{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:12.5px}
+.wk .tips b{color:var(--orange)}
+.wk .gate{margin-top:6px;font-size:12.5px;color:var(--green);font-weight:700}
+.wk.p1{border-left:5px solid #7fa08e} .wk.p2{border-left:5px solid var(--green)}
+.wk.p3{border-left:5px solid var(--blue)} .wk.p4{border-left:5px solid var(--orange)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:var(--radius);padding:14px 16px}
+.card h3{margin-top:0}
+.card ul{margin:0;padding-left:18px;font-size:13px}
+
+.res{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.res ul{margin:0;padding-left:18px;font-size:13px}
+.res li{margin:5px 0}
+.res code{background:#f2eee4;padding:1px 5px;border-radius:4px;font-size:12px}
+
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+
+@media (max-width:860px){
+  .nums{grid-template-columns:1fr 1fr}
+  .two,.res{grid-template-columns:1fr}
+  h1{font-size:25px}
+  .wk{padding:13px 12px}
+}
+@media print{
+  body{background:#fff;font-size:9.8pt}
+  .wrap{max-width:none;padding:0}
+  .hero,.wk,.card,table{box-shadow:none}
+  .wk{page-break-inside:avoid}
+  h2{page-break-after:avoid}
+  @page{size:A4;margin:11mm}
+}
+
+.lk{display:inline-block;margin-left:5px;padding:0 6px;border-radius:999px;background:#edf4ef;
+ color:#2d7b60;font-size:11px;text-decoration:none;border:1px solid #d5e2d9;white-space:nowrap}
+.lk:hover{background:#dcebe1}
+@media print{.lk{border:none;padding:0 2px}}
+
+.lk{display:inline-block;margin-left:5px;padding:0 6px;border-radius:999px;background:#edf4ef;
+ color:#2d7b60;font-size:11px;text-decoration:none;border:1px solid #d5e2d9;white-space:nowrap}
+.lk:hover{background:#dcebe1}
+@media print{.lk{border:none;padding:0 2px}}
+
+.lk{display:inline-block;margin-left:5px;padding:0 6px;border-radius:999px;background:#edf4ef;
+ color:#2d7b60;font-size:11px;text-decoration:none;border:1px solid #d5e2d9;white-space:nowrap}
+.lk:hover{background:#dcebe1}
+@media print{.lk{border:none;padding:0 2px}}
+
+.lklocal{display:inline-block;margin-left:5px;padding:0 6px;border-radius:999px;background:#f1efe9;
+ color:#9b958a;font-size:11px;border:1px solid #e2ddd2;white-space:nowrap}
+</style></head><body><div class="wrap"><div style="margin:0 0 18px;padding:12px 16px;border:1px solid #e6d9c3;background:#fdf7ea;border-radius:12px;font-size:13px;line-height:1.7">
+<b>云端版说明</b>：这一版带的是计划、方法、<a href="files/九上考点自查表.csv">考点表</a>、<a href="files/时政要点_2026年9-12月.docx">时政</a>、<a href="files/错题本_A4模板.docx">错题本</a>、<a href="files/背诵自测单_九上.docx">背诵单</a> 和 3 份江门卷。
+灰色标记的条目是 <b>107 GB 本地试卷</b>，无法上传（GitHub 单文件上限 100 MB），请在本机打开 <code>状元作战图.html</code> 使用；云上可改用第六节的学科网/组卷网页链接。
+</div>
+<div class="hero">
+  <div class="kicker">江门 · 第 13—20 周 · 2026.11.23 — 2027.1.17 · 按江门 800 分口径</div>
+  <h1>状元作战图 · 最终版</h1>
+  <p class="sub">中考折算后 680 → 目标 <b>733</b>（满分 800）｜期末卷面 624.5 → <b>688</b>（满分 760）｜1000 米 8 周并行</p>
+  <div class="nums">
+    <div class="num"><b>733</b><span>目标（中考 800 分制）</span></div>
+    <div class="num o"><b>+53</b><span>还要补的分</span></div>
+    <div class="num g"><b>688</b><span>期末卷面目标（760）</span></div>
+    <div class="num b"><b>15 h</b><span>每周学习（跑步 2 次）</span></div>
+  </div>
+</div>
+
+<h2>一、目标校准 <small>先讲清楚两套口径</small></h2>
+<p>你报的分数是<b>卷面分</b>，江门录取用的是<b>折算分</b>，两套不一样。生物 93、地理 92 已经考完并折算进总分（各 40 分制），<b>这两科从现在起不用再花一分钟</b>。</p>
+<p>按江门规则折算，你现在是 <b>680 / 800</b>，要 <b>733</b> 还差 <b class="gap">53 分</b>；换成期末卷面就是 <b>624.5 → 688</b>。</p><p>733 分的构成：<b>7 科 594</b> ＋ <b>生物地理 74</b>（已锁定，改不了）＋ <b>体育 65</b>。也就是要补的 53 分里，<b>52 分从 7 科里抠，1 分从体育现场考里拿</b>，生地那两栏不再参与。</p>
+<div class="law"><ol>
+  <li><b>主战场在数学和化学。</b>数学差 14（卷面 96→110）、化学差 8（卷面 77→88），两科占差距的 42%。</li>
+  <li><b>英语只差 2 分，别再加时间。</b>112/120 已经是全校前列，每周 1 小时维持就够。</li>
+  <li><b>生物地理锁死 74 分。</b>已经考完，谁也改不了，别再翻这两科的书。</li>
+  <li><b>体育只差 1 分，但这是最便宜的一分。</b>过程分 10 分稳拿，现场 55 分你已拿 54，把 1000 米提上去就是 65。</li>
+</ol></div>
+
+<h2>二、江门折算规则 <small>2026 年官方口径，总分 800</small></h2>
+<div class="tscroll"><table>
+<tr><th>科目</th><th class="c">卷面满分</th><th class="c">折算比例</th><th class="c">计入总分</th><th>说明</th></tr>
+<tr><td>语文</td><td class="c">120</td><td class="c">100%</td><td class="c">120</td><td>卷面即得分</td></tr>
+<tr><td>数学</td><td class="c">120</td><td class="c">100%</td><td class="c">120</td><td>卷面即得分</td></tr>
+<tr><td>英语</td><td class="c">120</td><td class="c">100%</td><td class="c">120</td><td>含听说能力测试</td></tr>
+<tr><td>物理</td><td class="c">100</td><td class="c">90%</td><td class="c">90</td><td>卷面 ×0.9</td></tr>
+<tr><td>历史</td><td class="c">100</td><td class="c">75%</td><td class="c">75</td><td>卷面 ×0.75</td></tr>
+<tr><td>化学</td><td class="c">100</td><td class="c">70%</td><td class="c">70</td><td>卷面 ×0.7</td></tr>
+<tr><td>道德与法治</td><td class="c">100</td><td class="c">60%</td><td class="c">60</td><td>卷面 ×0.6</td></tr>
+<tr><td>生物</td><td class="c">100</td><td class="c">40%</td><td class="c">40</td><td>八年级已考</td></tr>
+<tr><td>地理</td><td class="c">100</td><td class="c">40%</td><td class="c">40</td><td>八年级已考</td></tr>
+<tr><td>体育与健康</td><td class="c">65</td><td class="c">—</td><td class="c">65</td><td>含 1000 米</td></tr>
+<tr class="sum"><td>合计</td><td class="c">—</td><td class="c">—</td><td class="c">800</td><td>四舍五入取整计入</td></tr>
+</table></div>
+<p style="font-size:12.5px;color:#6d7872">依据：江门市教育局《2026 年江门市高中阶段学校考试招生工作意见》——语文、数学、英语各 120 分，物理 90、历史 75、化学 70、道德与法治 60，地理、生物学各 40，体育与健康 65，总分 800。</p>
+
+<h2>三、分数拆解 <small>卷面 → 折算 → 目标</small></h2>
+<div class="tscroll"><table>
+<tr><th>科目</th><th class="c">卷面满分</th><th class="c">你现在（卷面）</th><th class="c">折后</th><th class="c">目标折后</th><th class="c">要补（折后）</th><th class="c">卷面要考到</th></tr>
+<tr><td>语文</td><td class='c'>120</td><td class='c'>92.5</td><td class='c'>93</td><td class='c'>102</td><td class='c gap'>+9</td><td class='c'>102</td></tr><tr><td>数学</td><td class='c'>120</td><td class='c'>96</td><td class='c'>96</td><td class='c'>110</td><td class='c gap'>+14</td><td class='c'>110</td></tr><tr><td>英语</td><td class='c'>120</td><td class='c'>112</td><td class='c'>112</td><td class='c'>114</td><td class='c gap'>+2</td><td class='c'>114</td></tr><tr><td>物理</td><td class='c'>100</td><td class='c'>84</td><td class='c'>76</td><td class='c'>83</td><td class='c gap'>+7</td><td class='c'>92</td></tr><tr><td>化学</td><td class='c'>100</td><td class='c'>77</td><td class='c'>54</td><td class='c'>62</td><td class='c gap'>+8</td><td class='c'>88</td></tr><tr><td>道法</td><td class='c'>100</td><td class='c'>78</td><td class='c'>47</td><td class='c'>54</td><td class='c gap'>+7</td><td class='c'>90</td></tr><tr><td>历史</td><td class='c'>100</td><td class='c'>85</td><td class='c'>64</td><td class='c'>69</td><td class='c gap'>+5</td><td class='c'>92</td></tr><tr><td>生物<span class='pill b'>已考完</span></td><td class='c'>100</td><td class='c'>93</td><td class='c'>37</td><td class='c'>已锁定</td><td class='c'>—</td><td class='c'>—</td></tr><tr><td>地理<span class='pill b'>已考完</span></td><td class='c'>100</td><td class='c'>92</td><td class='c'>37</td><td class='c'>已锁定</td><td class='c'>—</td><td class='c'>—</td></tr><tr><td>体育<span class='pill c'>过程 10 + 现场 54</span></td><td class='c'>65</td><td class='c'>64</td><td class='c'>64</td><td class='c'>65</td><td class='c gap'>+1</td><td class='c'>现场 55/55</td></tr><tr class='sum'><td>合计</td><td class='c'>—</td><td class='c'>624.5</td><td class='c'>680</td><td class='c'>733</td><td class='c'>+53</td><td class='c'>688</td></tr></table></div>
+<p style="font-size:13px;color:#6d7872">体育 = 过程性 10（七八九年级 3+3+4）+ 现场 54，合计 64，距满 65 只差 1 分。期末是学校卷面 760 分制，折算表只用来看“中考够不够 733”。</p>
+
+<h2>四、8 个单周阶段 <small>每周独立，门槛按卷面分</small></h2>
+<p>筑基 2 周（学会怎么学）→ 攻坚 2 周（啃最难的三块）→ 换挡 2 周（转九下）→ 收口 2 周（只做错题和背诵）。达不到门槛就顺延，不加速。</p>
+<div class="weeks"><div class="wk p1">
+  <header><b>W13　11/23—11/29</b><span><em>筑基①</em>　<span class="target">卷面 640</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>二次函数起步 · 化学 1–2 单元 · 《岳阳楼记》</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>二次函数图象性质 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题归因<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>化学方程式 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>空气/氧气专题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学现象默写<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td></tr><tr><td>周三</td><td>《岳阳楼记》默写<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>跑步（W1 校准）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>文言实词 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td></tr><tr><td>周四</td><td>化学方程式 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>顶点式与平移 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>内能/比热容<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>化学单元卷<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>文言文一篇<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>道法第一单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 遮答案重做课本例题，做不出来再看解析<br>· 方程式每天 10 个滚动默写，错的单列一张<br>· 默写只标错字，不整句重抄</div><div class='gate'>门槛：函数题 15/20；方程式 10/10；默写错字 ≤2</div></div><div class="wk p1">
+  <header><b>W14　11/30—12/6</b><span><em>筑基②</em>　<span class="target">卷面 650</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>圆（垂径/圆周角）· 化学 3–4 · 名著《艾青诗选》</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>垂径定理 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>化学式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化合价与化学式<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周三</td><td>《艾青诗选》导读<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>跑步（W2 短速度）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>名著人物卡<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td></tr><tr><td>周四</td><td>化学式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>圆周角 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>电路识别与连接<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>化学单元卷<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>名著练习题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>道法第二单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 变式三连：改条件、改问法、改图形，各做一道<br>· 几何图手绘三遍：抄画 → 遮图画 → 默画<br>· 名著用三列：人物 / 情节 / 性格</div><div class='gate'>门槛：垂径 8 对 6；化合价 15 对 12；名著题 6 对 5</div></div><div class="wk p2">
+  <header><b>W15　12/7—12/13</b><span><em>攻坚①</em>　<span class="target">卷面 660</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>一元二次方程 · 化学 5 方程式 · 作文一篇</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>配方/公式法 10 题</td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>配平专项<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学计算<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td></tr><tr><td>周三</td><td>九上默写滚动<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文默写</span></td><td>跑步（W3 7×2 分钟）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>作文素材卡<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">作文素材</span></td></tr><tr><td>周四</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>判别式 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>欧姆定律<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>作文一篇（限时 45 分）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">作文素材</span></td><td>跑步<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>化学计算 5 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>道法第三单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 错题归因只写四类：概念 / 方法 / 计算 / 审题<br>· 配平先配氧，再配氢，最后配金属<br>· 作文“一人一事一议”：一个人物、一件事、一句议论</div><div class='gate'>门槛：方程 10 对 8；配平 10 全对；作文 45/50</div></div><div class="wk p2">
+  <header><b>W16　12/14—12/20</b><span><em>攻坚②</em>　<span class="target">卷面 670</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>旋转 + 概率 · 化学 6–7 · 九上第一次限时</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>旋转作图 6 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>碳与二氧化碳<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学实验题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td></tr><tr><td>周三</td><td>九上默写滚动<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文默写</span></td><td>跑步（W4 减量）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>概率 8 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td></tr><tr><td>周四</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>电功率计算<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>物理错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>九上综合选择</td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 96/120<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>化学综合 82/100<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步 + 1000 米测试<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>错题复盘（一刷）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>道法第四单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 限时卷一律用答题卡，按考场时间走<br>· 化学现象写四要素：颜色 / 状态 / 气味 / 放热<br>· 物理实验题按“目的-步骤-结论”三段写</div><div class='gate'>门槛：数学 96/120；化学 82/100；错题本 ≥20 题</div></div><div class="wk p3">
+  <header><b>W17　12/21—12/27</b><span><em>换挡①</em>　<span class="target">卷面 675</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>九下 反比例函数 · 化学 8 金属 · 九下诗歌</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>反比例图象与 k 8 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>金属活动性顺序<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周三</td><td>九下诗歌默写<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>跑步（W5 重建）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>九下文言实词<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td></tr><tr><td>周四</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>反比例与一次函数综合<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>生活用电<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>化学金属单元卷<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>九下诗歌鉴赏<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>道法九下第一单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 做一张“九上→九下”迁移表：同一方法换场景<br>· 反比例的 k 先画图，再代数<br>· 金属活动性编成口诀，每天顺一遍</div><div class='gate'>门槛：反比例 8 对 6；金属 10 对 8；迁移表能讲出来</div></div><div class="wk p3">
+  <header><b>W18　12/28—1/3</b><span><em>换挡②</em>　<span class="target">卷面 678</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>九下 相似 · 化学 9 溶液 · 《鱼我所欲也》</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>相似判定 8 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>溶解度曲线</td><td>化学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周三</td><td>《鱼我所欲也》<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>跑步（W6 4×400）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>文言翻译<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td></tr><tr><td>周四</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>相似性质与位似<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>电与磁<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>数学限时 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>化学溶液单元卷<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>作文二稿<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">作文素材</span></td><td>道法九下第二单元<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 整理 8 个相似基本图形，见到就认<br>· 溶解度曲线三问：几点饱和 / 怎么析出 / 质量分数<br>· 英语“一句多改”：主动改被动、陈述改从句</div><div class='gate'>门槛：相似 5 对 4；溶解度 6 对 5；基本图形能默画</div></div><div class="wk p4">
+  <header><b>W19　1/4—1/10</b><span><em>收口①</em>　<span class="target">卷面 683</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>九下 酸碱盐 · 九下古诗词 · 全科回炉</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>英语单词 20<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>酸碱性质 10 题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周二</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>中和反应与 pH<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>化学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周三</td><td>九下古诗词默写<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文大卷</span></td><td>跑步（W7 减量）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td><td>时政 8 条<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td></tr><tr><td>周四</td><td>方程式 10 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>锐角三角函数（若已学）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷</span></td><td>数学错题<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td></tr><tr><td>周五</td><td>道法术语 5 个<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>电学综合<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷</span></td><td>历史时间轴<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周六</td><td>整套数学卷 120 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">黑白卷</span></td><td>整套化学卷 60 分钟<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>跑步 + 1000 米测试<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">1000 米计划</span></td></tr><tr><td>周日</td><td>错题复盘（二刷）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>时政口述 + 道法术语<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>知识库 30 分<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">知识库</span></td></tr></table></div><div class='tips'><b>本周方法</b><br>· 酸碱盐画一张转化图：金属→氧化物→酸碱→盐<br>· 时政 8 条用“是什么-为什么-怎么做”口述<br>· 道法材料题固定三段：观点 / 材料 / 做法</div><div class='gate'>门槛：酸碱 10 对 8；时政 8 条能口述；整套卷时间够</div></div><div class="wk p4">
+  <header><b>W20　1/11—1/17</b><span><em>收口②</em>　<span class="target">卷面 688</span></span></header>
+  <p style="font-size:13.5px"><b>主线：</b>只做三件事：错题、背诵、一套卷</p>
+  <div class="tscroll"><table>
+  <tr><th>日</th><th>中午 40 分（记忆）</th><th>放学 40 分（专题）</th><th>晚上 30 分（错题）</th></tr><tr><td>周一</td><td>背诵单：化学方程式<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷</span></td><td>错题三刷（数学）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>错因口述</td></tr><tr><td>周二</td><td>背诵单：语文默写<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文默写</span></td><td>错题三刷（化学）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>错因口述</td></tr><tr><td>周三</td><td>背诵单：道法术语<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">道法大卷</span></td><td>慢跑 15 分钟</td><td>历史时间轴默画<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史大卷</span></td></tr><tr><td>周四</td><td>背诵单：物理公式</td><td>错题三刷（物理）<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>错因口述</td></tr><tr><td>周五</td><td>背诵单：英语词汇<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">英语默写</span></td><td>一套完整卷（保持手感）</td><td>不做新题</td></tr><tr><td>周六</td><td>看错题本<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>看错题本<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">错题本</span></td><td>早睡</td></tr><tr><td>周日</td><td>轻过一遍背诵单</td><td>准备考试用品</td><td>22:00 睡</td></tr></table></div><div class='tips'><b>本周方法</b><br>· 错题只看错因，不重抄题目<br>· 背诵单滚动三遍：读、遮、写<br>· 考前不做新题，只保手感</div><div class='gate'>门槛：每道错题能说出错因；背诵单全部过完</div></div></div>
+
+<h2>五、每科怎么学 <small>按“提分性价比”排</small></h2>
+<div class="tscroll"><table>
+<tr><th>科目</th><th class="c">要补</th><th>九上主方法</th><th>九下主方法</th><th>小 tips</th></tr>
+<tr><td><b>数学</b></td><td class="c gap">+14</td><td>例题遮答案重做 → 变式三连</td><td>反比例、相似绑进综合题</td><td>错题只写错因</td></tr>
+<tr><td><b>化学</b></td><td class="c gap">+8</td><td>方程式每天 10 个；现象四要素</td><td>金属→溶液→酸碱 转化图</td><td>配平先配氧</td></tr>
+<tr><td><b>语文</b></td><td class="c gap">+9</td><td>三行翻译法；默写每日 5 句</td><td>九下 1–3 单元 + 名著</td><td>作文备 4 类素材</td></tr>
+<tr><td><b>物理</b></td><td class="c gap">+7</td><td>公式卡（带条件）→ 电路图手绘</td><td>电生磁/磁生电 对照表</td><td>实验三段式</td></tr>
+<tr><td><b>道法</b></td><td class="c gap">+7</td><td>每课 5 个术语卡</td><td>九下两单元 + 时政 8 条</td><td>材料题引原文</td></tr>
+<tr><td><b>历史</b></td><td class="c gap">+5</td><td>每单元默画时间轴</td><td>九下 1–6 课 + 中外对比</td><td>提取-对应-评价</td></tr>
+<tr><td><b>英语</b></td><td class="c">+2</td><td>词汇 3-2-1；一句多改</td><td>九下 M1–M4 + 三步精听</td><td>阅读限时 8 分钟</td></tr>
+<tr><td><b>生物地理</b></td><td class="c">0</td><td colspan="3">已考完、已折算，<b>不再投入任何时间</b></td></tr>
+<tr><td><b>体育</b></td><td class="c">0</td><td colspan="3">1000 米按双阈值计划走，目标满分 65</td></tr>
+</table></div>
+
+<h2>六、资源导航 <small>从 2541 份里挑出来的，点开就是那一份</small></h2>
+<p>你给了 2541 个文件、107 GB，全列出来没法用。下面是按“这周要用什么”挑的主干，<b>每一条都验证过能打开</b>。</p>
+
+<h3>① 每科主用（单元卷 + 答案 + 补充）</h3>
+
+<div class="tscroll"><table>
+<tr><th>科目</th><th>单元卷（学完一章就做）</th><th>参考答案</th><th>整册卷 / 补充</th></tr>
+<tr><td><b>数学</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·数学 大卷</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">周测小卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷·数学</span></td></tr>
+<tr><td><b>化学</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·化学 大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷·化学</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">基础训练（含单元评价卷）</span></td></tr>
+<tr><td><b>物理</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·物理 大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷·物理</span></td></tr>
+<tr><td><b>语文</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·语文 大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">字词默写</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷·语文</span></td></tr>
+<tr><td><b>英语</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·英语（外研 WY）大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">教材词句默写</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">外研 Module 1 单元检测</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">Module 12</span></td></tr>
+<tr><td><b>道法</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·道法 大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">教材基础知识记背</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷·道法</span></td></tr>
+<tr><td><b>历史</b></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯大小卷·历史 大卷</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span></td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">九下第一单元复习与拔高</span>（同目录第 1–5 单元）</td></tr>
+</table></div>
+
+
+<h3>② 按周次用</h3>
+
+<div class="tscroll"><table>
+<tr><th>周次</th><th>这一周主用哪份</th><th>怎么用</th></tr>
+<tr><td>W13–W14</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学大卷第 21–22 章</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">化学大卷第 1–4 单元</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">语文字词默写</span></td><td>每天中午默写，放学做对应单元那一节；周日整章限时</td></tr>
+<tr><td>W15–W16</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">数学周测小卷</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 全优卷化学</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">物理大卷电学部分</span></td><td>周测小卷当“当天验收”，整卷留周六</td></tr>
+<tr><td>W17–W18</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯真题分类·数学</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">历史九下单元</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">外研 Module 1–12 检测</span></td><td>九下每章学完，从分类汇编里挑同考点的题 10 道</td></tr>
+<tr><td>W19–W20</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">广东黑白卷·数学白卷</span>＋<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">答案</span>＋<a href="files/2026_%E6%B1%9F%E9%97%A8%E6%95%B0%E5%AD%A6_%E6%9C%9F%E6%9C%AB%E9%A2%98%E7%9B%AE.docx">2026 江门数学卷</a>＋<a href="files/2026_%E6%B1%9F%E9%97%A8%E8%AF%AD%E6%96%87_%E6%9C%9F%E6%9C%AB%E9%A2%98%E7%9B%AE.docx">江门语文卷</a>＋<a href="files/2026_%E6%B1%9F%E9%97%A8%E9%81%93%E6%B3%95_%E6%9C%9F%E6%9C%AB%E9%A2%98%E7%9B%AE.docx">江门道法卷</a></td><td>整卷限时；江门卷只做九上+九下范围题，答案自己先对</td></tr>
+</table></div>
+
+
+<h3>③ 专项工具</h3>
+
+<div class="tscroll"><table>
+<tr><th>用途</th><th>文件</th><th>怎么用</th></tr>
+<tr><td>道法时政</td><td><a href="files/%E6%97%B6%E6%94%BF%E8%A6%81%E7%82%B9_2026%E5%B9%B49-12%E6%9C%88.docx">时政要点 2026 年 9–12 月</a></td><td>每周五背 2 条，用“是什么-为什么-怎么做”口述</td></tr>
+<tr><td>英语听力</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">2025 广东中考听力 mp3</span>　<span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">听力突破 PDF</span></td><td>周二、周四各 20 分钟，三步精听同一套</td></tr>
+<tr><td>数学专题</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯真题分类·数学</span></td><td>压轴题按“二次函数 / 圆 / 相似”分块刷</td></tr>
+<tr><td>语文作文</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">万唯中考名校模考高分作文</span></td><td>每周读 2 篇，抄 1 个开头 + 1 个结尾</td></tr>
+<tr><td>英语词汇</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">中考英语必备词汇</span></td><td>中午 20 个新词，次日回滚</td></tr>
+<tr><td>化学总复习</td><td><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">53 中考总复习·化学讲练册</span></td><td>单元学完当“知识串讲”翻一遍</td></tr>
+</table></div>
+
+
+<h3>④ 全部文件夹（想自己翻的时候）</h3>
+<div class="res">
+  <div class="card"><ul>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">01 江门期末真题</span>（1194 份）</li>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">02 教材</span>（13 本）</li>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">03 同步单元卷</span>（1172 份）</li>
+  </ul></div>
+  <div class="card"><ul>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">04 专题汇编</span>（127 份）</li>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">05 模拟卷</span>（30 份）</li>
+    <li><span class="lklocal" title="本地文件，云上版不含（107GB 试卷）">06 听力时政</span>（5 份）</li>
+  </ul></div>
+</div>
+
+<h3>⑤ 网页卷子（免费，需登录）</h3>
+<div class="res"><div class="card"><ul>
+  <li><a href="https://zujuan.xkw.com/7p3022804.html">2026 江门道法期末卷</a>——整卷在线看</li>
+  <li><a href="https://zujuan.xkw.com/1p3016003.html">2026 江门语文期末卷</a></li>
+  <li><a href="https://zy.21cnjy.com/25380879">2026 江门数学卷（含解析）</a></li>
+  <li><a href="https://doc.21cnjy.com/p-25011492.html">2026 江门英语卷（含答案）</a></li>
+</ul></div><div class="card"><ul>
+  <li><a href="https://www.51jiaoxi.com/doc-17884176.html">2026 江门物理卷（原卷+解析）</a></li>
+  <li><a href="https://doc.21cnjy.com/p-24989418.html">台山化学卷（含答案）</a></li>
+  <li><a href="https://www.51jiaoxi.com/doc-18016928.html">蓬江历史卷（扫描版含答案）</a></li>
+  <li><a href="https://www.zxxk.com/docpack/3623128.html">学科网江门七科包</a>（付费）</li>
+</ul></div></div>
+
+<h2>七、考场策略 <small>733 是“省”出来的</small></h2>
+<div class="tscroll"><table>
+<tr><th>科目</th><th>卷面</th><th>时间分配</th><th class="c">卷面目标</th></tr>
+<tr><td>语文</td><td>120 分 / 120 分钟</td><td>基础 25 → 阅读 55 → 作文 40</td><td class="c">102</td></tr>
+<tr><td>数学</td><td>120 分 / 120 分钟</td><td>选择填空 35 → 解答 70 → 检查 15</td><td class="c">110</td></tr>
+<tr><td>英语</td><td>120 分 / 90 分钟</td><td>听力 15 → 选择 25 → 阅读 30 → 写作 20</td><td class="c">114</td></tr>
+<tr><td>物理</td><td>100 分 / 80 分钟</td><td>选择 20 → 填空 15 → 实验 25 → 计算 20</td><td class="c">92</td></tr>
+<tr><td>化学</td><td>100 分 / 60 分钟</td><td>选择 20 → 填空 15 → 实验 15 → 计算 10</td><td class="c">88</td></tr>
+<tr><td>道法</td><td>100 分 / 60 分钟</td><td>选择 20 → 材料 40（每题 12–14 分钟）</td><td class="c">90</td></tr>
+<tr><td>历史</td><td>100 分 / 80 分钟</td><td>选择 30 → 材料 50</td><td class="c">92</td></tr>
+</table></div>
+<p style="font-size:13px;color:#6d7872">时间分配按广东中考口径估的，以学校实际卷面为准。原则：<b>先拿满基础分，再回头啃压轴</b>，绝不在压轴题上耗掉检查时间。</p>
+
+<h2>八、验收与红线</h2>
+<div class="two">
+  <div class="card">
+    <h3>每周验收（周日 15 分钟）</h3>
+    <ul>
+      <li>对照本周门槛，达标打勾，不达标顺延</li>
+      <li>错题本本周新增 ≥15 题</li>
+      <li>背诵单：当周内容能遮住复述</li>
+      <li>跑步：2 次训练是否完成</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>三条红线</h3>
+    <ul>
+      <li>22:30 睡，不熬夜补作业</li>
+      <li>跑步晨脉 +5、按痛、连续发沉 → 只慢跑 15 分钟</li>
+      <li>不达标只挪不加时，15 小时是上限</li>
+    </ul>
+  </div>
+</div>
+
+<h2>九、已经补给你的（直接点）</h2>
+<div class="tscroll"><table>
+<tr><th>工具</th><th>文件</th><th>怎么用</th></tr>
+<tr><td><b>错题本</b></td><td><a href="files/%E9%94%99%E9%A2%98%E6%9C%AC_A4%E6%A8%A1%E6%9D%BF.docx">错题本_A4模板.docx</a></td><td>A4 横向，一题一栏；只写错因不抄题；二刷三刷打勾</td></tr>
+<tr><td><b>背诵单</b></td><td><a href="files/%E8%83%8C%E8%AF%B5%E8%87%AA%E6%B5%8B%E5%8D%95_%E4%B9%9D%E4%B8%8A.docx">背诵自测单_九上.docx</a></td><td>遮住答案栏，每天 10 分钟：语文 15 篇、化学 20 个反应、物理 10 个公式、道法 16 个术语</td></tr>
+<tr><td><b>每周统计</b></td><td>同上（第 2 页）</td><td>周日填：新增错题 / 已三刷 / 本周最大问题</td></tr>
+</table></div>
+<p style="font-size:13px;color:#6d7872">12 月时政补丁、学校模拟卷：等你拿到后告诉我，我补进 06 和 W19，不需要你现在做什么。</p>
+
+<footer>
+目标 {goal_total} / 800（中考口径）＝期末卷面 {raw_goal} / 760。现状 {now_total}（卷面 {raw_now}）。<br>
+折算依据：江门市教育局 2026 年招生工作意见（语文数学英语 120、物理 90、历史 75、化学 70、道法 60、生物地理各 40、体育 65）。<br>
+材料：01 江门真题｜03 单元卷｜04 专题｜05 模拟｜06 时政听力｜考点表 V3（206 条，A 级 104 条）<br>
+本页 Ctrl+P 可直接打印 A4。
+</footer>
+</div></body></html>
